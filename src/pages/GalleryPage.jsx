@@ -1,5 +1,5 @@
 // Removed unused import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
 
@@ -70,6 +70,11 @@ const Gallery = () => {
     { id: "activities", name: "Activities" },
     { id: "events", name: "Events" }
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }
+, []);
 
   return (
     <section className="bg-[#f6f4f1] py-16 px-[5%]">

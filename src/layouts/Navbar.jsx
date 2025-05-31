@@ -26,7 +26,7 @@ export default function Navbar() {
           <li><Link to="/donation" className="hover:text-[#c4925c]">Donate</Link></li>
           <li><Link to="/programs" className="hover:text-[#c4925c]">Programs</Link></li>
           <li><Link to="/blog" className="hover:text-[#c4925c]">Blog</Link></li>
-          <li><Link to="/contact" className="hover:text-[#c4925c]">Contact</Link></li>
+          
         </ul>
         <button 
           onClick={() => setMenuOpen(!menuOpen)} 
@@ -43,7 +43,7 @@ export default function Navbar() {
           <li><Link to="/donation" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Donate</Link></li>
           <li><Link to="/programs" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Programs</Link></li>
           <li><Link to="/blog" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Blog</Link></li>
-          <li><Link to="/contact" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Contact</Link></li>
+          
         </ul>
       )}
     </nav>
