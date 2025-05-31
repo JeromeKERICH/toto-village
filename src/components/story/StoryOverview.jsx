@@ -1,0 +1,61 @@
+import { Lightbulb, Heart, Sparkles } from 'lucide-react';
+
+const StoryOverview = () => {
+  return (
+    <section className="bg-[#f6f4f1] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2b2b2b]">
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <span className="text-[#ff4848]">HOW IT ALL</span> STARTED
+        </h2>
+        <p className="text-lg text-[#4a4a4a] leading-relaxed">
+          Born from a spark of compassion and the desire to create something truly meaningful,
+          our journey began with a simple mission: to serve with heart, empower with wisdom,
+          and inspire with intention. We're not just building a platform; we're nurturing a movement.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Inception Card */}
+        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#ff4848]/20">
+          <div className="bg-[#fff7ec] p-3 rounded-full w-max mb-6">
+            <Lightbulb className="w-8 h-8 text-[#f4cc15]" />
+          </div>
+          <h3 className="text-xl font-bold text-[#2b2b2b] mb-3 group-hover:text-[#ff4848] transition-colors">
+            Inception
+          </h3>
+          <p className="text-[#4a4a4a]">
+            It all started with a simple idea to make a difference in the lives of those around us.
+          </p>
+        </div>
+
+        {/* Compassion Card */}
+        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#ff4848]/20">
+          <div className="bg-[#fff7ec] p-3 rounded-full w-max mb-6">
+            <Heart className="w-8 h-8 text-[#f4cc15]" />
+          </div>
+          <h3 className="text-xl font-bold text-[#2b2b2b] mb-3 group-hover:text-[#ff4848] transition-colors">
+            Compassion
+          </h3>
+          <p className="text-[#4a4a4a]">
+            Driven by empathy, we set out to create a space where everyone feels valued and supported.
+          </p>
+        </div>
+
+        {/* Empowerment Card */}
+        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#ff4848]/20">
+          <div className="bg-[#fff7ec] p-3 rounded-full w-max mb-6">
+            <Sparkles className="w-8 h-8 text-[#f4cc15]" />
+          </div>
+          <h3 className="text-xl font-bold text-[#2b2b2b] mb-3 group-hover:text-[#ff4848] transition-colors">
+            Empowerment
+          </h3>
+          <p className="text-[#4a4a4a]">
+            Our goal is to empower individuals and communities to thrive through innovation and collaboration.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StoryOverview;
