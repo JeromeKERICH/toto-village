@@ -12,9 +12,10 @@ const StoryPage = () => {
     , []);
   return (
     <div className='bg-[#f6f4f1] '>
+      <FoundersBrief/>
       <StoryOverview/>
       <StoryMission/>
-      <FoundersBrief/>
+      
       <DonationCTA/>
       <FAQ/>
     </div>
