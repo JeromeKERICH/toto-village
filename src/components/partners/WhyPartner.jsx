@@ -5,19 +5,19 @@ const features = [
     title: "Shared Vision",
     desc: "We align with partners who care deeply about people and purpose.",
     icon: <FaHandshake size={32} />,
-    color: "bg-[#fff0f0] text-[#ff4848]"
+    color: "bg-[#fff0f0] text-[#E67E22]"
   },
   {
     title: "Transparency",
     desc: "Every coin is accounted for. You see where your support goes.",
     icon: <FaSearchDollar size={32} />,
-    color: "bg-[#fff8e6] text-[#f4cc15]"
+    color: "bg-[#fff0f0] text-[#E67E22]"
   },
   {
     title: "Mutual Growth",
     desc: "We promote your brand as you help us amplify our mission.",
     icon: <FaRocket size={32} />,
-    color: "bg-[#fff0f0] text-[#ff4848]"
+    color: "bg-[#fff0f0] text-[#E67E22]"
   },
 ];
 

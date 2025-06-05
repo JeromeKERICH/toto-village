@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { supabase } from '../../services/supabaseClient';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 const PartnershipModal = ({ setOpen }) => {
   const [step, setStep] = useState(1);
@@ -9,21 +11,11 @@ const PartnershipModal = ({ setOpen }) => {
     fullName: '',
     email: '',
     phone: '',
-    organization: '',
-    orgType: '',
-    country: '',
-    website: '',
-    partnershipType: '',
-    intent: '',
-    timeline: '',
-    message: '',
-    proposal: null,
-    submitMethod: '',
+    partnerType: ''
   });
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setFormData({ ...formData, [name]: files ? files[0] : value });
+  const handleChange = (name, value) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleNext = () => {
@@ -42,50 +34,19 @@ const PartnershipModal = ({ setOpen }) => {
     setError(null);
 
     try {
-      // Upload file if exists
-      let proposalUrl = null;
-      if (formData.proposal) {
-        const fileExt = formData.proposal.name.split('.').pop();
-        const fileName = `${Date.now()}.${fileExt}`;
-        const filePath = `proposals/${fileName}`;
-        
-        const { error: uploadError } = await supabase.storage
-          .from('partnership-documents')
-          .upload(filePath, formData.proposal);
-        
-        if (uploadError) throw uploadError;
-        
-        // Get public URL
-        const { data: { publicUrl } } = supabase.storage
-          .from('partnership-documents')
-          .getPublicUrl(filePath);
-        
-        proposalUrl = publicUrl;
-      }
-
-      // Insert form data into partnerships table
       const { error: insertError } = await supabase
         .from('partnerships')
         .insert([{
           full_name: formData.fullName,
           email: formData.email,
           phone: formData.phone,
-          organization: formData.organization,
-          org_type: formData.orgType,
-          country: formData.country,
-          website: formData.website,
-          partnership_type: formData.partnershipType,
-          intent: formData.intent,
-          timeline: formData.timeline,
-          message: formData.message,
-          proposal_url: proposalUrl,
-          submit_method: formData.submitMethod,
+          partner_type: formData.partnerType,
           status: 'pending'
         }]);
 
       if (insertError) throw insertError;
 
-      setStep(6);
+      setStep(3); // Success step
     } catch (err) {
       console.error('Submission error:', err);
       setError(err.message || 'Failed to submit partnership request. Please try again.');
@@ -96,7 +57,7 @@ const PartnershipModal = ({ setOpen }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 backdrop-blur-sm transition-all duration-300">
-      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl w-[95%] md:w-[70%] lg:w-[60%] p-6 md:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative border border-gray-100 animate-fade-in-up">
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl w-[95%] md:w-[70%] lg:w-[50%] p-6 md:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative border border-gray-100 animate-fade-in-up">
         <button
           className="absolute top-5 right-5 text-gray-400 hover:text-red-500 text-2xl transition-colors duration-200"
           onClick={() => setOpen(false)}
@@ -107,14 +68,14 @@ const PartnershipModal = ({ setOpen }) => {
         </button>
 
         <div className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">Partnership Request</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">Become a Partner</h2>
           <div className="w-full bg-gray-200 rounded-full h-2.5">
             <div 
               className="bg-blue-600 h-2.5 rounded-full transition-all duration-500" 
-              style={{ width: `${(step/6)*100}%` }}
+              style={{ width: step === 1 ? '50%' : '100%' }}
             ></div>
           </div>
-          <p className="text-sm text-gray-500 mt-2">Step {step} of 5</p>
+          <p className="text-sm text-gray-500 mt-2">Step {step} of 2</p>
         </div>
 
         {error && (
@@ -126,15 +87,15 @@ const PartnershipModal = ({ setOpen }) => {
         <form onSubmit={handleSubmit} className="space-y-6">
           {step === 1 && (
             <div className="animate-fade-in">
-              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Personal Information</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Contact Information</h3>
+              <div className="space-y-6">
                 <div>
                   <label className="block text-gray-700 mb-2">Full Name*</label>
                   <input 
                     type="text" 
                     name="fullName" 
                     value={formData.fullName}
-                    onChange={handleChange} 
+                    onChange={(e) => handleChange('fullName', e.target.value)} 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                     required 
                   />
@@ -145,21 +106,45 @@ const PartnershipModal = ({ setOpen }) => {
                     type="email" 
                     name="email" 
                     value={formData.email}
-                    onChange={handleChange} 
+                    onChange={(e) => handleChange('email', e.target.value)} 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                     required 
                   />
                 </div>
                 <div>
                   <label className="block text-gray-700 mb-2">Phone Number*</label>
-                  <input 
-                    type="tel" 
-                    name="phone" 
+                  <PhoneInput
+                    international
+                    defaultCountry="US"
                     value={formData.phone}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    required 
+                    onChange={(value) => handleChange('phone', value)}
+                    className="phone-input-custom"
+                    inputClassName="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                    countrySelectProps={{
+                      className: "country-select-custom",
+                      dropdownClassName: "country-dropdown-custom"
+                    }}
+                    required
                   />
+                  <style jsx global>{`
+                    .phone-input-custom {
+                      --PhoneInputCountryFlag-height: 1.5em;
+                      --PhoneInputCountryFlag-width: 2em;
+                      --PhoneInputCountrySelectArrow-color: #6b7280;
+                      --PhoneInputCountrySelectArrow-opacity: 1;
+                    }
+                    .country-select-custom {
+                      padding-right: 0.5rem;
+                      margin-right: 0.5rem;
+                      border-right: 1px solid #d1d5db;
+                    }
+                    .country-dropdown-custom {
+                      z-index: 10;
+                      background: white;
+                      border-radius: 0.5rem;
+                      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                    }
+                  `}</style>
                 </div>
               </div>
             </div>
@@ -167,221 +152,78 @@ const PartnershipModal = ({ setOpen }) => {
 
           {step === 2 && (
             <div className="animate-fade-in">
-              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Organization Details</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">Organization Name*</label>
+              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Partnership Type</h3>
+              <div className="space-y-4">
+                <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
                   <input 
-                    type="text" 
-                    name="organization" 
-                    value={formData.organization}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    required 
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Organization Type*</label>
-                  <select 
-                    name="orgType" 
-                    value={formData.orgType}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiAjdjEwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tZG93biI+PHBhdGggZD0ibTYgOSA2IDYgNi02Ii8+PC9zdmc+')] bg-no-repeat bg-[center_right_1rem]"
+                    type="radio" 
+                    name="partnerType" 
+                    value="Donors & Funders" 
+                    checked={formData.partnerType === "Donors & Funders"}
+                    onChange={(e) => handleChange('partnerType', e.target.value)} 
+                    className="h-5 w-5 text-blue-600 focus:ring-blue-500"
                     required
-                  >
-                    <option value="">Select Organization Type</option>
-                    <option value="Nonprofit">Nonprofit</option>
-                    <option value="Company">Company</option>
-                    <option value="Church">Church</option>
-                    <option value="Media">Media</option>
-                    <option value="Educational">Educational</option>
-                    <option value="Government">Government</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Country*</label>
-                  <input 
-                    type="text" 
-                    name="country" 
-                    value={formData.country}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    required 
                   />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Website</label>
+                  <div>
+                    <p className="font-medium text-gray-800">Donors & Funders</p>
+                    <p className="text-sm text-gray-500">Support our mission financially</p>
+                  </div>
+                </label>
+                <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
                   <input 
-                    type="url" 
-                    name="website" 
-                    value={formData.website}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    placeholder="https://example.com"
+                    type="radio" 
+                    name="partnerType" 
+                    value="County Government Officials" 
+                    checked={formData.partnerType === "County Government Officials"}
+                    onChange={(e) => handleChange('partnerType', e.target.value)} 
+                    className="h-5 w-5 text-blue-600 focus:ring-blue-500"
                   />
-                </div>
+                  <div>
+                    <p className="font-medium text-gray-800">County Government Officials</p>
+                    <p className="text-sm text-gray-500">Collaborate on community projects</p>
+                  </div>
+                </label>
+                <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
+                  <input 
+                    type="radio" 
+                    name="partnerType" 
+                    value="Corporate Partners" 
+                    checked={formData.partnerType === "Corporate Partners"}
+                    onChange={(e) => handleChange('partnerType', e.target.value)} 
+                    className="h-5 w-5 text-blue-600 focus:ring-blue-500"
+                  />
+                  <div>
+                    <p className="font-medium text-gray-800">Corporate Partners</p>
+                    <p className="text-sm text-gray-500">Business collaborations and sponsorships</p>
+                  </div>
+                </label>
+                <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
+                  <input 
+                    type="radio" 
+                    name="partnerType" 
+                    value="Individual Partner" 
+                    checked={formData.partnerType === "Individual Partner"}
+                    onChange={(e) => handleChange('partnerType', e.target.value)} 
+                    className="h-5 w-5 text-blue-600 focus:ring-blue-500"
+                  />
+                  <div>
+                    <p className="font-medium text-gray-800">Individual Partner</p>
+                    <p className="text-sm text-gray-500">Volunteer or contribute as an individual</p>
+                  </div>
+                </label>
               </div>
             </div>
           )}
 
           {step === 3 && (
-            <div className="animate-fade-in">
-              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Partnership Intent</h3>
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">Partnership Type*</label>
-                  <select 
-                    name="partnershipType" 
-                    value={formData.partnershipType}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiAjdjEwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tZG93biI+PHBhdGggZD0ibTYgOSA2IDYgNi02Ii8+PC9zdmc+')] bg-no-repeat bg-[center_right_1rem]"
-                    required
-                  >
-                    <option value="">Select Partnership Type</option>
-                    <option value="Financial Support">Financial Support</option>
-                    <option value="Volunteering">Volunteering</option>
-                    <option value="Sponsorship">Sponsorship</option>
-                    <option value="Collaboration">Collaboration</option>
-                    <option value="In-Kind Donation">In-Kind Donation</option>
-                    <option value="Event Partnership">Event Partnership</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">How do you intend to support?*</label>
-                  <textarea 
-                    name="intent" 
-                    rows="3" 
-                    value={formData.intent}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    required 
-                    placeholder="Describe how your organization plans to support our mission..."
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Timeline</label>
-                  <input 
-                    type="text" 
-                    name="timeline" 
-                    value={formData.timeline}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    placeholder="e.g. January 2025 - December 2025"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-
-          {step === 4 && (
-            <div className="animate-fade-in">
-              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Proposal Details</h3>
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    name="message" 
-                    rows="4" 
-                    value={formData.message}
-                    onChange={handleChange} 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
-                    placeholder="Tell us more about your proposal, goals, and expectations from this partnership..."
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 mb-2">Attach Proposal (Optional)</label>
-                  <div className="flex items-center justify-center w-full">
-                    <label className="flex flex-col w-full border-2 border-dashed border-gray-300 hover:border-blue-500 rounded-lg cursor-pointer transition-all hover:bg-blue-50">
-                      <div className="flex flex-col items-center justify-center pt-5 pb-6 px-4">
-                        <svg className="w-8 h-8 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                        </svg>
-                        <p className="mb-2 text-sm text-gray-500">
-                          <span className="font-semibold">Click to upload</span> or drag and drop
-                        </p>
-                        <p className="text-xs text-gray-500">
-                          {formData.proposal ? formData.proposal.name : "PDF, DOC, DOCX (Max 5MB)"}
-                        </p>
-                      </div>
-                      <input 
-                        type="file" 
-                        name="proposal" 
-                        accept=".pdf,.doc,.docx" 
-                        onChange={handleChange} 
-                        className="hidden" 
-                      />
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {step === 5 && (
-            <div className="animate-fade-in">
-              <h3 className="text-xl font-semibold text-gray-700 mb-6 pb-2 border-b border-gray-200">Final Step</h3>
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-gray-700 mb-2">How would you like to proceed?*</label>
-                  <div className="space-y-3">
-                    <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
-                      <input 
-                        type="radio" 
-                        name="submitMethod" 
-                        value="Just Submit" 
-                        checked={formData.submitMethod === "Just Submit"}
-                        onChange={handleChange} 
-                        className="h-5 w-5 text-blue-600 focus:ring-blue-500"
-                        required
-                      />
-                      <div>
-                        <p className="font-medium text-gray-800">Just Submit</p>
-                        <p className="text-sm text-gray-500">We'll review your proposal and get back to you</p>
-                      </div>
-                    </label>
-                    <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
-                      <input 
-                        type="radio" 
-                        name="submitMethod" 
-                        value="Schedule a Call" 
-                        checked={formData.submitMethod === "Schedule a Call"}
-                        onChange={handleChange} 
-                        className="h-5 w-5 text-blue-600 focus:ring-blue-500"
-                      />
-                      <div>
-                        <p className="font-medium text-gray-800">Schedule a Call</p>
-                        <p className="text-sm text-gray-500">Let's discuss this partnership in detail</p>
-                      </div>
-                    </label>
-                    <label className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 cursor-pointer transition-all">
-                      <input 
-                        type="radio" 
-                        name="submitMethod" 
-                        value="Request Presentation" 
-                        checked={formData.submitMethod === "Request Presentation"}
-                        onChange={handleChange} 
-                        className="h-5 w-5 text-blue-600 focus:ring-blue-500"
-                      />
-                      <div>
-                        <p className="font-medium text-gray-800">Request Presentation</p>
-                        <p className="text-sm text-gray-500">We'll prepare materials and schedule a meeting</p>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {step === 6 && (
             <div className="text-center py-8 animate-fade-in">
               <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
                 <svg className="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">Thank you for your submission!</h2>
-              <p className="text-gray-600 mb-6">We've received your partnership request and will review it shortly. Our team will reach out to you soon.</p>
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Thank you for your interest!</h2>
+              <p className="text-gray-600 mb-6">We've received your partnership request and will contact you soon to discuss next steps.</p>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -392,7 +234,7 @@ const PartnershipModal = ({ setOpen }) => {
             </div>
           )}
 
-          {step < 6 && (
+          {step < 3 && (
             <div className="flex justify-between items-center pt-4 border-t border-gray-200">
               {step > 1 ? (
                 <button 
@@ -409,25 +251,23 @@ const PartnershipModal = ({ setOpen }) => {
               ) : (
                 <div></div>
               )}
-              {step < 5 ? (
+              {step < 2 ? (
                 <button 
                   type="button" 
                   onClick={handleNext} 
                   className="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center ml-auto"
-                  disabled={loading}
+                  disabled={loading || !formData.fullName || !formData.email || !formData.phone}
                 >
-                  {loading ? 'Processing...' : 'Next'}
-                  {!loading && (
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                  )}
+                  Next
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
                 </button>
               ) : (
                 <button 
                   type="submit" 
                   className="px-6 py-2.5 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center ml-auto"
-                  disabled={loading}
+                  disabled={loading || !formData.partnerType}
                 >
                   {loading ? (
                     <>

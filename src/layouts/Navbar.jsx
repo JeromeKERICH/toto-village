@@ -25,7 +25,7 @@ export default function Navbar() {
           <li><Link to="/storypage" className="hover:text-[#c4925c]">Our Story</Link></li>
           <li><Link to="/donation" className="hover:text-[#c4925c]">Donate</Link></li>
           <li><Link to="/programs" className="hover:text-[#c4925c]">Programs</Link></li>
-          <li><Link to="/blog" className="hover:text-[#c4925c]">Blog</Link></li>
+          <li><Link to="/events" className="hover:text-[#c4925c]">Events</Link></li>
           
         </ul>
         <button 
@@ -42,7 +42,7 @@ export default function Navbar() {
           <li><Link to="/storypage" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Our Story</Link></li>
           <li><Link to="/donation" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Donate</Link></li>
           <li><Link to="/programs" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Programs</Link></li>
-          <li><Link to="/blog" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Blog</Link></li>
+          <li><Link to="/events" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Events</Link></li>
           
         </ul>
       )}

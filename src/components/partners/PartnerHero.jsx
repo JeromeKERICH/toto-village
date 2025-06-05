@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PartnershipModal from './PartnershipModal';
 
 const PartnershipHero = () => {
@@ -22,17 +23,17 @@ const PartnershipHero = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
           <button
-            className="bg-[#ff4848] text-white px-8 py-4 rounded-full hover:bg-[#e03e3e] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="bg-[#E67E22] text-white px-8 py-4 rounded-full hover:bg-[#e03e3e] transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             onClick={() => setOpen(true)}
           >
-            Become a Member
+            Parner With Us
           </button>
-          <button
+          <Link to="/about-partners"
             className="border-2 border-[#2b2b2b] text-[#2b2b2b] px-8 py-4 rounded-full hover:bg-[#2b2b2b] hover:text-white transition-all duration-300 font-medium"
             onClick={() => setOpen(true)}
           >
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
 

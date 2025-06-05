@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaHeart } from "react-icons/fa";
 
 const faqs = [
   {
@@ -43,8 +44,12 @@ const DonationFAQs = () => {
   return (
     <section className="py-16 px-[4%] md:px-[10%] bg-[#f6f4f1]">
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2b2b2b] mb-4">
-          LEARN MORE ABOUT DONATIONS
+        <div className="inline-flex items-center justify-center bg-[#5B8C5A]/10 px-4 py-2 rounded-full mb-4">
+          <FaHeart className="text-[#E67E22] mr-2" />
+          <span className="text-sm font-medium text-[#E67E22]">COMMON QUESTIONS</span>
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
+          Learn More About Donations
         </h2>
         <p className="text-[#4a4a4a] max-w-2xl mx-auto">
           Find answers to common questions about how your support makes a difference.
@@ -55,26 +60,26 @@ const DonationFAQs = () => {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className={`rounded-xl shadow-sm transition-all duration-300 overflow-hidden ${
-              i % 4 === 0 || i % 4 === 3 ? "bg-[#fff0f0]" : "bg-[#fff8e6]"
+            className={`rounded-xl shadow-sm transition-all duration-300 overflow-hidden border ${
+              i % 2 === 0 ? "bg-[#F0F7EF] border-[#5B8C5A]/30" : "bg-[#FEF3E6] border-[#E67E22]/30"
             }`}
           >
             <button
               onClick={() => toggle(i)}
               className={`w-full text-left px-6 py-5 flex justify-between items-center transition-colors ${
                 openIndex === i
-                  ? i % 4 === 0 || i % 4 === 3
-                    ? "bg-[#ff4848]/10"
-                    : "bg-[#f4cc15]/10"
+                  ? i % 2 === 0 
+                    ? "bg-[#5B8C5A]/10"
+                    : "bg-[#E67E22]/10"
                   : "hover:bg-white/30"
               }`}
             >
-              <span className="font-semibold text-[#2b2b2b] text-lg">
+              <span className="font-semibold text-[#2C3E50] text-lg">
                 {faq.question}
               </span>
               <span
                 className={`text-2xl font-bold ${
-                  i % 4 === 0 || i % 4 === 3 ? "text-[#ff4848]" : "text-[#f4cc15]"
+                  i % 2 === 0 ? "text-[#5B8C5A]" : "text-[#E67E22]"
                 }`}
               >
                 {openIndex === i ? "-" : "+"}

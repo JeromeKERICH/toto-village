@@ -57,7 +57,7 @@ const ContactSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get <span className="text-[#ff4848]">In Touch</span>
+            Get <span className="text-[#E67E22]">In Touch</span>
           </h2>
           <p className="text-lg text-[#4a4a4a] max-w-2xl mx-auto">
             Have questions or want to get involved? Reach out to us—we'd love to hear from you!
@@ -183,7 +183,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#ff4848] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e63e3e] transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-[#E67E22] text-white px-6 py-3 rounded-lg font-semibold  transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

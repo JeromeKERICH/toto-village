@@ -31,7 +31,7 @@ function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-[#ff4848]">What They're</span> Saying
+            <span className="text-[#E67E22]">What They're</span> Saying
           </h2>
           <p className="text-lg text-[#4a4a4a] max-w-2xl mx-auto">
             Parents, caregivers, and community members share how Toto Village is transforming lives every day.
@@ -83,7 +83,7 @@ function Testimonials() {
                 <div className="text-[#4a4a4a] mb-4">{t.role}</div>
                 <Link
                   to={t.link}
-                  className="text-[#ff4848] font-semibold hover:text-[#e63e3e] transition-colors inline-flex items-center group/link"
+                  className="text-[#E67E22] font-semibold  transition-colors inline-flex items-center group/link"
                 >
                   Read Full Story
                   <span className="ml-2 group-hover/link:translate-x-1 transition-transform">

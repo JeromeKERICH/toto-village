@@ -17,13 +17,13 @@ const DonationPage = () => {
   
           <a
             href="https://yourdonationpage.com"
-            className="inline-block bg-[#E63946] hover:bg-[#c9303e] text-white font-semibold px-8 py-4 rounded-full shadow-md transition duration-300"
+            className="inline-block bg-[#E67E22] hover:bg-[#c9303e] text-white font-semibold px-8 py-4 rounded-full shadow-md transition duration-300"
           >
             Donate Now
           </a>
         </section>
   
-        {/* Maybe some testimonials or another section below */}
+      
       </div>
     );
   };

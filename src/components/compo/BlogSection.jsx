@@ -34,7 +34,7 @@ const BlogSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-[#ff4848]">RESOURCES</span> FOR YOU
+            <span className="text-[#E67E22]">Read our blogs</span> designed for you
           </h2>
           <p className="text-lg text-[#4a4a4a] max-w-2xl mx-auto">
             Discover insightful articles on parenting, child development, and family wellness.
@@ -67,7 +67,7 @@ const BlogSection = () => {
                 </p>
                 <Link
                   to={`/blog/${post.slug}`}
-                  className="mt-2 text-[#ff4848] font-semibold inline-flex items-center hover:text-[#e63e3e] transition-colors group/readmore"
+                  className="mt-2 text-[#E67E22] font-semibold inline-flex items-center hover:text-[#e63e3e] transition-colors group/readmore"
                 >
                   Read More
                   <span className="ml-2 group-hover/readmore:translate-x-1 transition-transform">
@@ -82,7 +82,7 @@ const BlogSection = () => {
         <div className="text-center mt-12">
           <Link
             to="/blog"
-            className="inline-block bg-[#ff4848] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e63e3e] transition-all duration-300 shadow-md hover:shadow-lg"
+            className="inline-block bg-[#E67E22] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#e63e3e] transition-all duration-300 shadow-md hover:shadow-lg"
           >
             View All Articles
           </Link>

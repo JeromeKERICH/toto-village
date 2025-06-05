@@ -11,6 +11,8 @@ import Blog from "../pages/Blog";
 import Partners from "../pages/Partners";
 import Dashboard from "../pages/Dashboard";
 import Gallery from "../pages/GalleryPage";
+import AboutPartners from "../pages/AboutPartners";
+import EventsPage from "../pages/Events";
 // ... import the rest
 
 export default function AppRouter() {
@@ -28,6 +30,8 @@ export default function AppRouter() {
         <Route path="/partners" element={<Partners/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
+        <Route path="/about-partners" element={<AboutPartners/>}/>
+        <Route path="/events" element={<EventsPage/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

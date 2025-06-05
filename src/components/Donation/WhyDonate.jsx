@@ -8,28 +8,28 @@ const WhyDonate = () => {
     {
       title: "A child back to school",
       description: "KES 500 buys a child schoolbooks, shoes, and lunch for a week.",
-      icon: <IoIosSchool className="text-[#FF4848] text-3xl" />,
-      bgColor: "bg-[#FFF0F0]",
-      borderColor: "border-[#FF4848]/30"
+      icon: <IoIosSchool className="text-[#5B8C5A] text-3xl" />,
+      bgColor: "bg-[#F0F7EF]",
+      borderColor: "border-[#5B8C5A]/30"
     },
     {
       title: "A warm meal served",
       description: "KES 200 provides a cooked meal for a family of 3 today.",
-      icon: <FaUtensils className="text-[#F4CC15] text-3xl" />,
-      bgColor: "bg-[#FFF8E6]",
-      borderColor: "border-[#F4CC15]/30"
+      icon: <FaUtensils className="text-[#E67E22] text-3xl" />,
+      bgColor: "bg-[#FEF3E6]",
+      borderColor: "border-[#E67E22]/30"
     },
     {
       title: "Shelter & dignity",
       description: "KES 1000 helps us restore dignity with clothing, bedding, and hygiene.",
-      icon: <GiClothes className="text-[#457B9D] text-3xl" />,
-      bgColor: "bg-[#F0F7FF]",
-      borderColor: "border-[#457B9D]/30"
+      icon: <GiClothes className="text-[#5B8C5A] text-3xl" />,
+      bgColor: "bg-[#F0F7EF]",
+      borderColor: "border-[#5B8C5A]/30"
     }
   ];
 
   return (
-    <section className="bg-[#f6f4f1] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2b2b2b]">
+    <section className="bg-[#f6f4f1] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,14 +38,14 @@ const WhyDonate = () => {
         className="max-w-6xl mx-auto"
       >
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center bg-[#FF4848]/10 px-4 py-2 rounded-full mb-4">
-            <FaHeart className="text-[#FF4848] mr-2" />
-            <span className="text-sm font-medium text-[#FF4848]">MAKE AN IMPACT</span>
+          <div className="inline-flex items-center justify-center bg-[#5B8C5A]/10 px-4 py-2 rounded-full mb-4">
+            <FaHeart className="text-[#E67E22] mr-2" />
+            <span className="text-sm font-medium text-[#E67E22]">MAKE AN IMPACT</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Your <span className="text-[#FF4848]">Donation</span> Matters
+            Why Your <span className="text-[#E67E22]">Donation</span> Matters
           </h2>
-          <p className="text-lg md:text-xl text-[#4B5563] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-[#4a4a4a] max-w-3xl mx-auto leading-relaxed">
             Every donation you make brings us closer to a world where no child goes to bed hungry, 
             no mother feels helpless, and every dream has a chance to flourish.
           </p>
@@ -64,8 +64,8 @@ const WhyDonate = () => {
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm mb-4">
                 {card.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#1D3557]">{card.title}</h3>
-              <p className="text-[#4B5563] leading-relaxed">{card.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-[#2C3E50]">{card.title}</h3>
+              <p className="text-[#4a4a4a] leading-relaxed">{card.description}</p>
             </motion.div>
           ))}
         </div>
@@ -77,10 +77,10 @@ const WhyDonate = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-[#4B5563] mb-6">
+          <p className="text-lg text-[#4a4a4a] mb-6">
             Your support creates ripples of change that transform entire communities.
           </p>
-          <button className="bg-[#FF4848] hover:bg-[#E53E3E] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center mx-auto">
+          <button className="bg-[#E67E22] hover:bg-[#4A7B48] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center mx-auto">
             <FaHeart className="mr-2" />
             See More Impact Stories
           </button>

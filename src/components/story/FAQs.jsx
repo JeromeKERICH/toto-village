@@ -8,9 +8,9 @@ const faqs = [
       "Toto Village is a community-driven childcare model focused on empowering women and supporting early childhood development in low-income areas through affordable, safe, and nurturing care.",
   },
   {
-    question: "Who are TotoCarers?",
+    question: "Who are Toto Trainers?",
     answer:
-      "TotoCarers are trained local women who run home-based daycare centers as part of the Toto Village model. They offer quality care while building sustainable livelihoods.",
+      "Toto Trainers are trained local women who run home-based daycare centers as part of the Toto Village model. They offer quality care while building sustainable livelihoods.",
   },
   {
     question: "How does Toto Village support women?",
@@ -22,7 +22,6 @@ const faqs = [
     answer:
       "Our programs operate in middle- and low-income communities in Kenya, with a growing vision to expand across East Africa.",
   },
-
   {
     question: "How can I get involved or support Toto Village?",
     answer:
@@ -34,11 +33,10 @@ const faqs = [
       "Toto Village primarily serves children aged 0-5 years, focusing on their early development and care needs.",
   },
   {
-    question: "How can I find a TotoCare center near me?",
+    question: "How can I find a Toto Village centre near me?",
     answer:
       "You can visit our website and use the center locator tool to find the nearest TotoCare center in your community.",
   },
-
   {
     question: "What makes Toto Village different from other childcare options?",
     answer:
@@ -55,12 +53,12 @@ const FAQ = () => {
 
   return (
     <section className="py-10 px-[4%] md:px-[10%] bg-[#f8fafc] text-[#1e293b]">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
           FREQUENTLY ASKED QUESTIONS
         </h2>
 
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {faqs.map((faq, index) => (
             <div
               key={index}

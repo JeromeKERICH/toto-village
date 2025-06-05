@@ -2,10 +2,10 @@ import { Lightbulb, Heart, Sparkles } from 'lucide-react';
 
 const StoryOverview = () => {
   return (
-    <section className="bg-[#f6f4f1] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2b2b2b]">
+    <section className="bg-[#f6f4f1] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          <span className="text-[#ff4848]">HOW IT ALL</span> STARTED
+          <span className="text-[#E67E22]">HOW IT ALL</span> STARTED
         </h2>
         <p className="text-lg text-[#4a4a4a] leading-relaxed">
           Born from a spark of compassion and the desire to create something truly meaningful,
@@ -16,11 +16,11 @@ const StoryOverview = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {/* Inception Card */}
-        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#ff4848]/20">
-          <div className="bg-[#fff7ec] p-3 rounded-full w-max mb-6">
-            <Lightbulb className="w-8 h-8 text-[#f4cc15]" />
+        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#5B8C5A]/20">
+          <div className="bg-[#F5E6CA] p-3 rounded-full w-max mb-6">
+            <Lightbulb className="w-8 h-8 text-[#E67E22]" />
           </div>
-          <h3 className="text-xl font-bold text-[#2b2b2b] mb-3 group-hover:text-[#ff4848] transition-colors">
+          <h3 className="text-xl font-bold text-[#2C3E50] mb-3 group-hover:text-[#5B8C5A] transition-colors">
             Inception
           </h3>
           <p className="text-[#4a4a4a]">
@@ -29,11 +29,11 @@ const StoryOverview = () => {
         </div>
 
         {/* Compassion Card */}
-        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#ff4848]/20">
-          <div className="bg-[#fff7ec] p-3 rounded-full w-max mb-6">
-            <Heart className="w-8 h-8 text-[#f4cc15]" />
+        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#5B8C5A]/20">
+          <div className="bg-[#F5E6CA] p-3 rounded-full w-max mb-6">
+            <Heart className="w-8 h-8 text-[#E67E22]" />
           </div>
-          <h3 className="text-xl font-bold text-[#2b2b2b] mb-3 group-hover:text-[#ff4848] transition-colors">
+          <h3 className="text-xl font-bold text-[#2C3E50] mb-3 group-hover:text-[#5B8C5A] transition-colors">
             Compassion
           </h3>
           <p className="text-[#4a4a4a]">
@@ -42,11 +42,11 @@ const StoryOverview = () => {
         </div>
 
         {/* Empowerment Card */}
-        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#ff4848]/20">
-          <div className="bg-[#fff7ec] p-3 rounded-full w-max mb-6">
-            <Sparkles className="w-8 h-8 text-[#f4cc15]" />
+        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all group border border-transparent hover:border-[#5B8C5A]/20">
+          <div className="bg-[#F5E6CA] p-3 rounded-full w-max mb-6">
+            <Sparkles className="w-8 h-8 text-[#E67E22]" />
           </div>
-          <h3 className="text-xl font-bold text-[#2b2b2b] mb-3 group-hover:text-[#ff4848] transition-colors">
+          <h3 className="text-xl font-bold text-[#2C3E50] mb-3 group-hover:text-[#5B8C5A] transition-colors">
             Empowerment
           </h3>
           <p className="text-[#4a4a4a]">

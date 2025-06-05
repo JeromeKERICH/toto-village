@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaChild, FaHandsHelping, FaSchool, FaLeaf } from "react-icons/fa";
+import { FaChild, FaHandsHelping, FaSchool, FaLeaf, FaHeart } from "react-icons/fa";
 
 const programs = [
   {
@@ -50,7 +50,11 @@ const ProgramsPage = () => {
     <div className="py-12 px-[4%] sm:px-[10%] bg-[#f6f4f1]">
       {/* Header Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-4 text-[#2b2b2b]">Our Programs</h1>
+        <div className="inline-flex items-center justify-center bg-[#E67E22] px-4 py-2 rounded-full mb-4">
+          <FaHeart className="text-white mr-2" />
+          <span className="text-sm font-medium text-white">OUR SOLUTIONS</span>
+        </div>
+        <h1 className="text-4xl font-bold mb-4 text-[#2C3E50]">Our Programs</h1>
         <p className="text-[#4a4a4a] max-w-2xl mx-auto">
           Discover how we're transforming childcare through innovative, community-centered solutions.
         </p>
@@ -62,21 +66,21 @@ const ProgramsPage = () => {
           <div
             key={index}
             className={`group bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 ${
-              index % 4 === 0 || index % 4 === 3
-                ? "border-[#ff4848] hover:bg-[#fff0f0]"
-                : "border-[#f4cc15] hover:bg-[#fff8e6]"
+              index % 2 === 0
+                ? "border-[#5B8C5A] hover:bg-[#F0F7EF]"
+                : "border-[#E67E22] hover:bg-[#FEF3E6]"
             }`}
           >
             <div
               className={`mb-6 p-4 rounded-full w-max ${
-                index % 4 === 0 || index % 4 === 3
-                  ? "bg-[#ff4848]/10 text-[#ff4848]"
-                  : "bg-[#f4cc15]/10 text-[#f4cc15]"
+                index % 2 === 0
+                  ? "bg-[#5B8C5A]/10 text-[#5B8C5A]"
+                  : "bg-[#E67E22]/10 text-[#E67E22]"
               }`}
             >
               {program.icon}
             </div>
-            <h2 className="text-xl font-semibold mb-3 text-[#2b2b2b] group-hover:text-[#ff4848] transition-colors">
+            <h2 className="text-xl font-semibold mb-3 text-[#2C3E50] group-hover:text-[#5B8C5A] transition-colors">
               {program.title}
             </h2>
             <p className="text-[#4a4a4a]">{program.description}</p>
@@ -85,8 +89,8 @@ const ProgramsPage = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="mt-20 bg-white p-10 rounded-xl text-center max-w-4xl mx-auto shadow-sm border border-[#f6f4f1]">
-        <h2 className="text-2xl font-bold mb-4 text-[#2b2b2b]">
+      <div className="mt-20 bg-white p-10 rounded-xl text-center max-w-4xl mx-auto shadow-sm border border-[#5B8C5A]/20">
+        <h2 className="text-2xl font-bold mb-4 text-[#2C3E50]">
           Want to make a lasting impact?
         </h2>
         <p className="mb-6 text-[#4a4a4a] max-w-xl mx-auto">
@@ -95,7 +99,7 @@ const ProgramsPage = () => {
           support creates generational change.
         </p>
         <Link to="/partners">
-          <button className="bg-[#ff4848] text-white px-8 py-3 rounded-full hover:bg-[#e03e3e] transition-all font-medium shadow-md hover:shadow-lg">
+          <button className="bg-[#E67E22] text-white px-8 py-3 rounded-full hover:bg-[#4A7B48] transition-all font-medium shadow-md hover:shadow-lg">
             Partner With Us
           </button>
         </Link>

@@ -72,7 +72,7 @@ const PartnerStories = () => {
               </div>
             </div>
             <div className="bg-[#fff0f0] px-4 py-3 rounded-lg inline-block">
-              <p className="text-[#ff4848] font-medium">Impact: {stories[currentIndex].impact}</p>
+              <p className="text-[#E67E22] font-medium">Impact: {stories[currentIndex].impact}</p>
             </div>
           </div>
 
