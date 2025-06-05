@@ -4,26 +4,26 @@ import { motion } from "framer-motion";
 const coreValues = [
   {
     icon: <FaHeart className="text-[#5B8C5A]" />,
-    title: "Empathy First",
-    desc: "We listen, we feel, and we serve with heart.",
+    title: "Dignity for every mother",
+    desc: "We believe every mother deserves respect, support, and the right to thrive.",
     bg: "bg-[#F0F7EF]"
   },
   {
     icon: <FaRocket className="text-[#E67E22]" />,
-    title: "Courage to Lead",
-    desc: "We dare to go first, with bold solutions and fearless ideas.",
+    title: "Community-centered solutions",
+    desc: "We create local, sustainable childcare that empowers families and communities.",
     bg: "bg-[#FEF3E6]"
   },
   {
     icon: <FaFeatherAlt className="text-[#5B8C5A]" />,
-    title: "Authenticity Always",
-    desc: "We stay true to our purpose and our people.",
+    title: "Empowerment through education",
+    desc: "We believe in the power of knowledge to uplift and transform lives.",
     bg: "bg-[#F0F7EF]"
   },
   {
     icon: <FaBalanceScale className="text-[#E67E22]" />,
-    title: "Purpose Over Profit",
-    desc: "Every action stems from meaning, not margins.",
+    title: "•	Access and affordability",
+    desc: "We ensure that quality childcare is accessible and affordable for all families.",
     bg: "bg-[#FEF3E6]"
   },
   {
@@ -57,8 +57,7 @@ const StoryMission = () => {
             Our <span className="text-[#E67E22]">Mission</span>
           </h2>
           <p className="text-lg text-[#4a4a4a] leading-relaxed">
-            To empower individuals and communities through transformative digital solutions,
-            heartfelt storytelling, and compassionate support that inspires both personal and collective growth.
+          To provide safe, affordable, and nurturing childcare that empowers working mothers, supports early childhood development, and redefines care as essential community infrastructure, giving every child the right to a dignified start and every mother the freedom to thrive.
           </p>
         </div>
       </div>
@@ -70,8 +69,7 @@ const StoryMission = () => {
             Our <span className="text-[#E67E22]">Vision</span>
           </h2>
           <p className="text-lg text-[#4a4a4a] leading-relaxed">
-            To be a beacon of light and guidance for purpose-driven brands, families, and individuals—
-            creating a world where tech serves humanity with empathy, creativity, and integrity.
+          To build a future where no child is denied a safe place to grow and no mother is forced to choose between work and care, creating a network of community-rooted childcare centers that champion dignity, education, and opportunity for all.
           </p>
         </div>
         <div className="w-full md:w-1/2">
