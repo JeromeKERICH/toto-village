@@ -22,7 +22,7 @@ export default function Navbar() {
         </Link>
         <ul className="hidden md:flex space-x-6 text-[#444] font-medium">
           <li><Link to="/" className="hover:text-[#c4925c]">Home</Link></li>
-          <li><Link to="/storypage" className="hover:text-[#c4925c]">Our Story</Link></li>
+          <li><Link to="/storypage" className="hover:text-[#c4925c]">About Us</Link></li>
           <li><Link to="/donation" className="hover:text-[#c4925c]">Donate</Link></li>
           <li><Link to="/programs" className="hover:text-[#c4925c]">Programs</Link></li>
           <li><Link to="/events" className="hover:text-[#c4925c]">Events</Link></li>
@@ -39,7 +39,7 @@ export default function Navbar() {
       {menuOpen && (
         <ul className="md:hidden px-4 pb-4 space-y-3 text-[#444] font-medium bg-[#f6f4f1]">
           <li><Link to="/" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Home</Link></li>
-          <li><Link to="/storypage" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Our Story</Link></li>
+          <li><Link to="/storypage" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>About Us</Link></li>
           <li><Link to="/donation" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Donate</Link></li>
           <li><Link to="/programs" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Programs</Link></li>
           <li><Link to="/events" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Events</Link></li>

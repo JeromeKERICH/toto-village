@@ -1,61 +1,84 @@
 import React from 'react';
-import { FaBookReader, FaHandsHelping, FaChild } from 'react-icons/fa';
+import { FaBuilding, FaBriefcase, FaUserGraduate, FaUsers } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-export default function Programs() {
+export default function Partnerships() {
   const programs = [
     {
-      icon: <FaBookReader className="text-4xl text-[#E67E22] group-hover:text-white transition-colors" />,
-      title: "Early Childhood Learning",
-      description: "Structured and play-based learning experiences to help children thrive emotionally and intellectually.",
+      icon: <FaBuilding className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
+      image: "assets/partnership.jpg",
+      title: "Partnerships for Affordable Childcare",
+      description: "We work with counties to identify, upgrade, and manage childcare facilities in busy economic areas.",
     },
     {
-      icon: <FaHandsHelping className="text-4xl text-[#E67E22] group-hover:text-white transition-colors" />,
-      title: "Parent Support Circles",
-      description: "Safe, guided spaces for parents to connect, learn, and share experiences around caregiving.",
+      icon: <FaBriefcase className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
+      image: "assets/g5.jpg",
+      title: "On-site Childcare Centers",
+      description: "Providing on-site childcare that supports working parents and drives organizational success.",
     },
     {
-      icon: <FaChild className="text-4xl text-[#E67E22] group-hover:text-white transition-colors" />,
-      title: "Weekend Enrichment Activities",
-      description: "Fun, hands-on weekend programs for both parents and children to bond and grow together.",
+      icon: <FaUserGraduate className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
+      image: "assets/train.jpg",
+      title: "Workforce Development",
+      description: "We recruit, train, and certify local caregivers in child development and business management.",
+    },
+    {
+      icon: <FaUsers className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
+      image: "assets/g4.jpg",
+      title: "Community Engagement",
+      description: "We bring childcare into the heart of communities where care becomes accessible and valued.",
     },
   ];
 
   return (
-    <section className="bg-[#f6f6f6] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          Our <span className="text-[#E67E22]">Programs</span>
-        </h2>
-        <p className="text-lg max-w-2xl mx-auto text-[#4a4a4a]">
-          We walk with families, offering practical tools, heartfelt connection, and opportunities to grow together.
-        </p>
-      </div>
+    <section className="py-4 px-4 md:px-12 lg:px-24 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
+            Our Programs
+          </h2>
+          <p className="text-lg max-w-3xl mx-auto text-[#4a4a4a]">
+            Collaborative solutions that spark economic growth and childcare accessibility
+          </p>
+        </div>
 
-      {/* Program Cards */}
-      <div className="grid gap-8 md:grid-cols-3">
-        {programs.map((program, index) => (
-          <div 
-            key={index} 
-            className="group bg-white rounded-xl p-8 text-left hover:shadow-lg transition-all duration-300 hover:bg-[#5B8C5A]"
-          >
-            <div className="mb-6 bg-[#F5E6CA] p-4 rounded-full w-max group-hover:bg-[#4a7a48] transition-colors">
-              {program.icon}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+          {programs.map((program, index) => (
+            <div 
+              key={index} 
+              className="group rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 hover:-translate-y-2 bg-white border border-gray-200"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={program.image} 
+                  alt={program.title} 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-4 left-4 bg-white p-3 rounded-full shadow-md border border-gray-300">
+                  {program.icon}
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
+                  {program.title}
+                </h3>
+                <p className="mb-6 text-[#2C3E50]/90">
+                  {program.description}
+                </p>
+                <Link
+                  to={`/partnerships#${program.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center font-bold text-[#2C3E50] hover:text-[#2C3E50]/90 border-b-2 border-[#2C3E50] pb-1 transition-colors"
+                >
+                  Learn More
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3 group-hover:text-white">{program.title}</h3>
-            <p className="text-[#4a4a4a] group-hover:text-white/90">{program.description}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <div className="text-center mt-16">
-        <Link
-          to="/programs"
-          className="inline-block bg-[#E67E22] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#4a7a48] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-        >
-          Explore All Programs →
-        </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

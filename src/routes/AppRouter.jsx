@@ -13,6 +13,9 @@ import Dashboard from "../pages/Dashboard";
 import Gallery from "../pages/GalleryPage";
 import AboutPartners from "../pages/AboutPartners";
 import EventsPage from "../pages/Events";
+import PartnershipHero from "../components/partners/PartnerHero";
+import ProgramDetails from "../pages/ProgramDetails";
+
 // ... import the rest
 
 export default function AppRouter() {
@@ -23,6 +26,7 @@ export default function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<ProgramsPage/>}/>
+        <Route path="/program/:programId" element={<ProgramDetails/>}/>
         <Route path="/storypage" element={<StoryPage/>}/>
         <Route path="full-story" element={<FullStoryPage/>}/>
         <Route path="/donation" element={<Donate/>}/>
@@ -32,6 +36,7 @@ export default function AppRouter() {
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/about-partners" element={<AboutPartners/>}/>
         <Route path="/events" element={<EventsPage/>}/>
+        <Route path="/childcare" element={<PartnershipHero/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

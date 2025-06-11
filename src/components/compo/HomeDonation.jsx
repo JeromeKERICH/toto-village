@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { FaHandHoldingHeart, FaArrowRight } from 'react-icons/fa';
 
 export default function DonationSection() {
   const [amount, setAmount] = useState('');
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isMonthly, setIsMonthly] = useState(false);
 
   const donateOptions = [100, 500, 1000];
 
@@ -11,41 +13,24 @@ export default function DonationSection() {
       alert("Please enter a valid amount.");
       return;
     }
-    alert(`Thank you for donating $${amount}!`);
+    alert(`Thank you for your ${isMonthly ? 'monthly ' : ''}donation of $${amount}!`);
     // Here you'd call Supabase function or redirect to a payment gateway
   };
 
-  const handleOptionSelect = (val) => {
-    setAmount(val);
-    setSelectedOption(val);
-  };
+ 
 
   return (
-    <section className="bg-white py-12 md:py-20 px-6 md:px-16 flex justify-center">
-      <div className="bg-[#F5E6CA] p-8 md:p-12 rounded-2xl shadow-lg w-full max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#2C3E50]">
-          Support <span className="text-[#E67E22]">Our Mission</span>
+    <section className="py-12 md:py-20 px-4 md:px-16 flex justify-center">
+      <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto text-center border border-[#E67E22]/20">
+        
+        <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
+          Support Our Mission
         </h2>
         <p className="mb-8 text-lg text-[#4a4a4a] max-w-2xl mx-auto">
           Every contribution makes a difference in the life of a child. Help us continue empowering families and building brighter futures.
         </p>
 
-        {/* Donation Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {donateOptions.map((val) => (
-            <button
-              key={val}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                selectedOption === val
-                  ? 'bg-[#2C3E50] text-black shadow-md'
-                  : 'bg-[#333] text-white hover:bg-[#5B8C5A]'
-              }`}
-              onClick={() => handleOptionSelect(val)}
-            >
-              ${val}
-            </button>
-          ))}
-        </div>
+        
 
         {/* Custom Amount Input */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8 max-w-md mx-auto">
@@ -58,22 +43,23 @@ export default function DonationSection() {
                 setAmount(e.target.value);
                 setSelectedOption(null);
               }}
-              placeholder="Custom Amount"
-              className="border-2 border-[#5B8C5A] pl-8 pr-4 py-3 rounded-lg w-full focus:border-[#333] focus:outline-none"
+              placeholder="Other amount"
+              className="border-2 border-[#2C3E50]/50 pl-8 pr-4 py-3 rounded-lg w-full focus:border-[#E67E22] focus:outline-none focus:ring-2 focus:ring-[#E67E22]/30"
               min="1"
             />
           </div>
           <button
-            className="w-full sm:w-auto bg-[#E67E22]  text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#4a7a48] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto bg-[#E67E22] text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
             onClick={handleDonate}
           >
             Donate Now
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
 
-        <div className="bg-[#F5E6CA] p-4 rounded-lg max-w-2xl mx-auto">
+        <div className="bg-[#f8f8f8]/50 p-4 rounded-lg max-w-2xl mx-auto border border-[#2C3E50]/20">
           <p className="text-[#2C3E50] font-medium">
-            <span className="text-[#5B8C5A] font-bold">100%</span> of your donation goes directly to the development of the organization.
+            <span className="text-[#2C3E50]">100%</span> of your donation goes directly to supporting families in need.
           </p>
         </div>
       </div>

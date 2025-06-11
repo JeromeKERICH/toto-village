@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import HeroSection from '../components/compo/Hero'
-import OurStory from '../components/compo/Story'
 import Programs from '../components/compo/ProgramCard'
-import Testimonials from '../components/compo/TestimonialSlider'
 import DonationSection from '../components/compo/HomeDonation'
-import TheChangeSoFar from '../components/compo/Impact'
-import PodcastSection from '../components/compo/PodcastPlayer'
 import ContactSection from '../components/compo/ContactForm'
+import MissionSection from '../components/compo/Mission-Vision'
+import CommunitySection from '../components/compo/Community'
+import Testimonial from '../components/compo/TestimonialSlider'
 
 const Home = () => {
   useEffect(() => {
@@ -15,12 +14,11 @@ const Home = () => {
   return (
     <div>
       <HeroSection/>
-      <OurStory/>
+      <MissionSection/>
+      <CommunitySection/>
       <Programs/>
       <DonationSection/>
-      <TheChangeSoFar/>
-      <PodcastSection/>
-      <Testimonials/>
+      <Testimonial/>
       <ContactSection/>
     </div>
   )

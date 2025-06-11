@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const FoundersBrief = () => {
   return (
-    <section className="bg-[#F5E6CA] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
+    <section className="bg-white py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
       <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
         {/* Founder Image */}
         <motion.div 
@@ -31,14 +31,14 @@ const FoundersBrief = () => {
         >
           <div className="space-y-2">
             <span className="text-[#5B8C5A] font-medium tracking-wider">THE FOUNDER'S STORY</span>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+            <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm leading-tight">
               Meet The <span className="text-[#E67E22]">Visionary</span>
             </h2>
             <div className="w-20 h-1 bg-[#E67E22]"></div>
           </div>
 
           <p className="text-lg md:text-xl text-[#4a4a4a] leading-relaxed">
-            Prisca Muyodi's decade-long work in low-income communities led to a powerful realization—
+            Prisca Muyodi's decade-long work in low-income communities led to a powerful realization
             mothers were sacrificing their dreams due to lack of childcare. From this insight, Toto Village was born.
             Her vision? A care economy that uplifts women, nurtures children, and empowers communities from within.
           </p>
@@ -48,7 +48,7 @@ const FoundersBrief = () => {
               to="/full-story"
               className="inline-block bg-[#2C3E50] hover:bg-[#1a2635] text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
             >
-              Read Our Full Story
+              Read More About Us
             </Link>
             <Link
               to="/gallery"

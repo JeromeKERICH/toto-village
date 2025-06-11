@@ -2,10 +2,10 @@ import { Lightbulb, Heart, Sparkles } from 'lucide-react';
 
 const StoryOverview = () => {
   return (
-    <section className="bg-[#f6f4f1] py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
+    <section className="bg-white py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          <span className="text-[#E67E22]">HOW IT ALL</span> STARTED
+        <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
+         HOW IT ALL STARTED
         </h2>
         <p className="text-lg text-[#4a4a4a] leading-relaxed">
           Born from a spark of compassion and the desire to create something truly meaningful,

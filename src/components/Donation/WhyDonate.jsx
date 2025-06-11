@@ -1,31 +1,24 @@
 import { motion } from "framer-motion";
-import { FaBook, FaUtensils, FaHome, FaHeart } from "react-icons/fa";
+import { FaBook, FaUtensils, FaHome, FaHeart, FaBookOpen } from "react-icons/fa";
 import { GiClothes } from "react-icons/gi";
 import { IoIosSchool } from "react-icons/io";
 
 const WhyDonate = () => {
   const donationCards = [
     {
-      title: "A child back to school",
-      description: "KES 500 buys a child schoolbooks, shoes, and lunch for a week.",
+      title: "A child’s education",
+      description: "It helps us provide neccesary supplies for a child’s education today.",
       icon: <IoIosSchool className="text-[#5B8C5A] text-3xl" />,
       bgColor: "bg-[#F0F7EF]",
       borderColor: "border-[#5B8C5A]/30"
     },
     {
-      title: "A warm meal served",
-      description: "KES 200 provides a cooked meal for a family of 3 today.",
-      icon: <FaUtensils className="text-[#E67E22] text-3xl" />,
+      title: "A book for a child",
+      description: "We help provide books and learning materials for children in need.",
+      icon: <FaBookOpen className="text-[#E67E22] text-3xl" />,
       bgColor: "bg-[#FEF3E6]",
       borderColor: "border-[#E67E22]/30"
     },
-    {
-      title: "Shelter & dignity",
-      description: "KES 1000 helps us restore dignity with clothing, bedding, and hygiene.",
-      icon: <GiClothes className="text-[#5B8C5A] text-3xl" />,
-      bgColor: "bg-[#F0F7EF]",
-      borderColor: "border-[#5B8C5A]/30"
-    }
   ];
 
   return (

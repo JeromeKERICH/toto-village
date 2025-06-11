@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { supabase } from '../../services/supabaseClient'; // Adjust the import path
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -53,14 +54,14 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#f6f4f1] py-16 md:py-24 px-6 md:px-16">
+    <section className="py-4 px-4 md:px-12 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get <span className="text-[#E67E22]">In Touch</span>
+          <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
+            Get In Touch
           </h2>
           <p className="text-lg text-[#4a4a4a] max-w-2xl mx-auto">
-            Have questions or want to get involved? Reach out to us—we'd love to hear from you!
+            Have questions or want to get involved? Reach out to us. We'd love to hear from you!
           </p>
         </div>
 
@@ -68,7 +69,7 @@ const ContactSection = () => {
           {/* Left Column - Contact Info */}
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold text-[#2b2b2b] mb-6">Contact Information</h3>
+              <h3 className="text-xl font-bold text-[#2C3E50] drop-shadow-sm mb-6">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -80,7 +81,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#2b2b2b]">Address</h4>
-                    <p className="text-[#4a4a4a]">123 TotoVillage Lane, Nairobi, Kenya</p>
+                    <p className="text-[#4a4a4a]">Thiong'o Road, Mountain View, Nairobi, KENYA</p>
                   </div>
                 </div>
 
@@ -92,7 +93,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#2b2b2b]">Phone</h4>
-                    <p className="text-[#4a4a4a]">(+254) 712 345 678</p>
+                    <p className="text-[#4a4a4a]">(+254) 769 786000</p>
                   </div>
                 </div>
 
@@ -110,13 +111,13 @@ const ContactSection = () => {
               </div>
 
               <a
-                href="https://wa.me/254712345678"
+                href="https://wa.me/254769786000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center mt-8 bg-[#25D366] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1da851] transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-6.29-3.429c-.545 1.492-1.189 2.925-2.144 4.01l-.167.146c-.129.1-.34.3-.45.35l-.104.035c-.182.06-.316.045-.435-.015-.116-.06-.68-.4-1.298-1.296-.49-.71-.82-1.5-.98-2.29-.08-.39.04-.76.18-1.06.14-.3.55-.8.55-.8.09-.1.1-.18.15-.31.05-.13.05-.23 0-.32l-.45-.9c-.13-.25-.35-.37-.6-.39-.25-.02-.5.16-.75.27-.25.11-1.08.54-1.2 1.61-.12 1.07.1 2.54.93 3.8.83 1.26 2.14 2.59 3.07 3.19l.47.32c1.15.76 2.47 1.04 3.57 1.59.39.19.85.33 1.3.43.45.1.97.14 1.48.07.51-.06 1.2-.28 1.7-.51.5-.23.9-.55 1.21-.96.32-.41.47-.81.5-1.22.03-.41-.04-.81-.2-1.21-.16-.4-.6-1.12-1.23-1.14-.63-.02-1.22.22-1.63.37-.41.15-.73.29-1.01.4-.28.11-.58.15-.88.05-.3-.1-.62-.35-.98-.65-.36-.3-1.21-1.18-1.36-1.28-.15-.1-.3-.15-.45.15-.15.3-.57 1.18-.7 1.41-.13.23-.26.3-.48.2l-.57-.26c-.24-.11-.5-.25-.7-.45-.21-.2-.42-.5-.63-.75-.21-.25-.17-.38.01-.63l.33-.41.7-.89c.75-.94.67-1.2-.02-2.19z"/>
+                  <FaWhatsapp className='text-xl'/>
                 </svg>
                 Chat on WhatsApp
               </a>
@@ -125,7 +126,7 @@ const ContactSection = () => {
 
           {/* Right Column - Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-xl font-bold text-[#2b2b2b] mb-6">Send Us a Message</h3>
+            <h3 className="text-xl font-bold text-[#2C3E50] drop-shadow-sm mb-6">Send Us a Message</h3>
             
             {submitStatus && (
               <div className={`mb-6 p-4 rounded-lg ${
