@@ -43,8 +43,8 @@ const DonationHero = () => {
         </div>
 
         <div className="relative max-w-3xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Make a Difference <span className="text-[#f4cc15]">Today</span>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-sm">
+            Make a Difference Today
           </h1>
           
           <p className="text-lg md:text-xl text-[#F1FAEE] leading-relaxed">
