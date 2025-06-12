@@ -37,13 +37,81 @@ export default function Programs() {
   return (
     <section className="py-4 px-4 md:px-12 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        {/* New Introductory Section */}
+        <div className="mb-16 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl shadow-sm border border-gray-100">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
             Our Programs
           </h2>
-          <p className="text-lg max-w-3xl mx-auto text-[#4a4a4a]">
-            Collaborative solutions that spark economic growth and childcare accessibility
-          </p>
+            <div className="space-y-4 text-lg text-[#4a4a4a] text-left">
+              <p>
+              In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare—a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
+                The childcare crisis reflects deeper structural barriers that limit children's development, 
+                restrict women's ability to work, and perpetuate intergenerational poverty.
+              </p>
+              <p>
+                <span className="font-semibold text-[#2C3E50]">Toto Village</span> approaches childcare solutions 
+                as essential social and economic infrastructure, not just a private responsibility.
+              </p>
+              <p>
+                We partner with governments and corporations to design and scale community-embedded childcare 
+                systems that are affordable, high-quality, and sustainable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* The Toto Village Difference Section */}
+        <div className="mb-16 bg-[#2C3E50] text-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+            The Toto Village Difference
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <p>Design and scaling of community-embedded childcare solutions that allow women to work and children to thrive — creating dual-generational impact in low-income communities.</p>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <p>Our model partners with County Governments and Private Corporations to integrate quality childcare into public markets, transport hubs, and workplaces.</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <p>Women Economic Empowerment through Training and Workforce Development for childcare economy workers.</p>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <p>Improving early childhood development outcomes and school preparedness.</p>
+              </div>
+              <div className="flex items-start">
+                <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <p>Ensuring sustainability and growth of community based childcare centres.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">

@@ -15,6 +15,7 @@ import AboutPartners from "../pages/AboutPartners";
 import EventsPage from "../pages/Events";
 import PartnershipHero from "../components/partners/PartnerHero";
 import ProgramDetails from "../pages/ProgramDetails";
+import Community from "../pages/CommunityE";
 
 // ... import the rest
 
@@ -37,6 +38,7 @@ export default function AppRouter() {
         <Route path="/about-partners" element={<AboutPartners/>}/>
         <Route path="/events" element={<EventsPage/>}/>
         <Route path="/childcare" element={<PartnershipHero/>}/>
+        <Route path='/community-extended' element={<Community/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

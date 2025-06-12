@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUsers, FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function CommunitySection() {
   return (
@@ -52,10 +53,10 @@ export default function CommunitySection() {
               Join our movement to empower families and transform communities.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-[#E67E22] text-white px-8 py-4 rounded-lg font-bold hover:shadow-xl transition-all duration-300 flex items-center gap-2 group text-center">
+              <Link to="/community-extended" className="bg-[#E67E22] text-white px-8 py-4 rounded-lg font-bold hover:shadow-xl transition-all duration-300 flex items-center gap-2 group text-center">
                 Join Our Community
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -25,6 +25,9 @@ export default function Navbar() {
           <li><Link to="/storypage" className="hover:text-[#c4925c]">About Us</Link></li>
           <li><Link to="/donation" className="hover:text-[#c4925c]">Donate</Link></li>
           <li><Link to="/programs" className="hover:text-[#c4925c]">Programs</Link></li>
+          <li><Link to="/impact" className='hover:text-[#c4925c'>Impact</Link></li>
+          <li><Link to="/get-invoved" className='hover:text-[#c4925c'>Get Involved</Link></li>
+          <li><Link to="/media" className='hover:text-[#c4925c'>Media</Link></li>
           
           
         </ul>
