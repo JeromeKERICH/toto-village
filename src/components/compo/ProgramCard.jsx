@@ -37,8 +37,9 @@ export default function Partnerships() {
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
             Our Programs
           </h2>
-          <p className="text-lg max-w-3xl mx-auto text-[#4a4a4a]">
-            Collaborative solutions that spark economic growth and childcare accessibility
+          <p className="text-lg max-w-4xl mx-auto text-[#4a4a4a]">
+          In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare, a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
+
           </p>
         </div>
 

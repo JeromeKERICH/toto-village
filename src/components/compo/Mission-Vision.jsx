@@ -11,8 +11,10 @@ export default function MissionSection() {
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
             Our Purpose
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
-            Building a future where every family has access to quality childcare
+          <p className="text-gray-600 max-w-4xl mx-auto text-lg">
+          Building localized, dual-generational childcare solutions, we enable women to work and children to thrive, driving inclusive growth, reducing gender inequality, and delivering system-level impact across communities.
+
+
           </p>
         </div>
 

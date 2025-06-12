@@ -42,7 +42,7 @@ const DonationFAQs = () => {
   };
 
   return (
-    <section className="py-16 px-[4%] md:px-[10%] bg-white">
+    <section className="py-4 px-[4%] md:px-[10%] bg-white">
       <div className="max-w-4xl mx-auto text-center mb-12">
         <div className="inline-flex items-center justify-center bg-[#5B8C5A]/10 px-4 py-2 rounded-full mb-4">
           <FaHeart className="text-[#E67E22] mr-2" />

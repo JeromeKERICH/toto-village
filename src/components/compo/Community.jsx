@@ -24,7 +24,8 @@ export default function CommunitySection() {
             <div className="bg-[#E67E22]/10 p-6 rounded-2xl border border-[#E67E22]/20 shadow-sm">
               <div className="flex items-start gap-4">
                 <p className="text-[#2C3E50] ">
-                  Our main goal is to <span className="font-bold">improve the overall economic and social well-being</span> of the community.
+                Our main goal is to improve the overall economic and social well-being of low-income communities.
+
                 </p>
               </div>
             </div>
