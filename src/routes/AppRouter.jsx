@@ -16,6 +16,8 @@ import EventsPage from "../pages/Events";
 import PartnershipHero from "../components/partners/PartnerHero";
 import ProgramDetails from "../pages/ProgramDetails";
 import Community from "../pages/CommunityE";
+import GetInvolved from "../pages/Involved";
+import MediaPage from "../pages/Media";
 
 // ... import the rest
 
@@ -39,6 +41,8 @@ export default function AppRouter() {
         <Route path="/events" element={<EventsPage/>}/>
         <Route path="/childcare" element={<PartnershipHero/>}/>
         <Route path='/community-extended' element={<Community/>}/>
+        <Route path="/get-invoved" element={<GetInvolved/>}/>
+        <Route path="/media" element={<MediaPage/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

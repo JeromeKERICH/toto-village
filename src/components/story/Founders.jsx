@@ -50,12 +50,7 @@ const FoundersBrief = () => {
             >
               Read More About Us
             </Link>
-            <button
             
-              className="inline-block border-2 border-[#5B8C5A] text-[#5B8C5A] hover:bg-[#5B8C5A] hover:text-white px-8 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300 font-medium"
-            >
-              View Our Gallery
-            </button>
           </div>
 
           <div className="pt-4 flex items-center space-x-4">

@@ -45,6 +45,9 @@ export default function Navbar() {
           <li><Link to="/storypage" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>About Us</Link></li>
           <li><Link to="/donation" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Donate</Link></li>
           <li><Link to="/programs" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Programs</Link></li>
+          <li><Link to="/impact" className='hover:text-[#c4925c'>Impact</Link></li>
+          <li><Link to="/get-invoved" className='hover:text-[#c4925c'>Get Involved</Link></li>
+          <li><Link to="/media" className='hover:text-[#c4925c'>Media</Link></li>
           
           
         </ul>

@@ -43,7 +43,7 @@ export default function Programs() {
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
             Our Programs
           </h2>
-            <div className="space-y-4 text-lg text-[#4a4a4a] text-left">
+            <div className="space-y-2 text-lg text-[#4a4a4a] text-left">
               <p>
               In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare—a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
                 The childcare crisis reflects deeper structural barriers that limit children's development, 
