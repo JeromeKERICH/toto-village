@@ -14,10 +14,13 @@ import Gallery from "../pages/GalleryPage";
 import AboutPartners from "../pages/AboutPartners";
 import EventsPage from "../pages/Events";
 import PartnershipHero from "../components/partners/PartnerHero";
-import ProgramDetails from "../pages/ProgramDetails";
 import Community from "../pages/CommunityE";
 import GetInvolved from "../pages/Involved";
 import MediaPage from "../pages/Media";
+import PartnershipProgram from "../pages/Childcare";
+import OnSiteChildcare from "../pages/Onsite";
+import CommunityEngagement from "../pages/Engagement";
+import WorkforceDevelopment from "../pages/Workforce";
 
 // ... import the rest
 
@@ -29,7 +32,6 @@ export default function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<ProgramsPage/>}/>
-        <Route path="/program/:programId" element={<ProgramDetails/>}/>
         <Route path="/storypage" element={<StoryPage/>}/>
         <Route path="full-story" element={<FullStoryPage/>}/>
         <Route path="/donation" element={<Donate/>}/>
@@ -43,6 +45,10 @@ export default function AppRouter() {
         <Route path='/community-extended' element={<Community/>}/>
         <Route path="/get-invoved" element={<GetInvolved/>}/>
         <Route path="/media" element={<MediaPage/>}/>
+        <Route path="/program/partnership-program" element={<PartnershipProgram/>}/>
+        <Route path="/program/on-site" element={<OnSiteChildcare/>}/>
+        <Route path="/program/community-engagement" element={<CommunityEngagement/>}/>
+        <Route path="/program/workforce-development" element={<WorkforceDevelopment/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

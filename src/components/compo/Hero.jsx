@@ -44,7 +44,7 @@ export default function HeroSection() {
         {/* Optional image box if you still want to show an image */}
         <div className="w-full md:w-1/2">
           <img
-            src="assets/hero3.jpg"
+            src="assets/hero4.jpg"
             alt="Happy children playing at TotoVillage"
             className="w-full rounded-xl shadow-2xl"
           />

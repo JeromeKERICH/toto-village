@@ -74,13 +74,6 @@ export default function Community() {
   ];
 
   
-  // Partnership Impact Data
-  const impactMetrics = [
-    { value: "520+", label: "Young mothers transitioned to sustainable livelihoods" },
-    { value: "80", label: "Trained childcare providers with increased household income" },
-    { value: "20%", label: "Children with improved development outcomes" },
-    { value: "5", label: "Pilot childcare hubs launched" }
-  ];
 
   // Caregiver Spotlight
   const caregiverSpotlight = {
@@ -113,15 +106,7 @@ export default function Community() {
           </div>
         </div>
 
-        {/* Impact Metrics */}
-        <div className="mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {impactMetrics.map((metric, index) => (
-            <div key={index} className="bg-[#f8f9fa] p-6 rounded-xl border border-gray-200">
-              <p className="text-3xl font-bold text-[#E67E22] mb-2">{metric.value}</p>
-              <p className="text-[#2C3E50]">{metric.label}</p>
-            </div>
-          ))}
-        </div>
+        
 
         {/* Caregiver Spotlight */}
         <div className="mb-20 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl">
