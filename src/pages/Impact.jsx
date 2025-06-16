@@ -132,8 +132,8 @@ const Impact = () => {
         <div className="container max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
-                Evidence-Based <span className="text-[#FF9F1C]">Results</span>
+              <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#f8f8f8] drop-shadow-sm text-center">
+                Evidence-Based Results
               </h2>
               <p className="text-xl mb-8">
                 Independent evaluations confirm our model delivers measurable improvements across key indicators:
