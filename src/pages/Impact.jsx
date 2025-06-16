@@ -110,9 +110,9 @@ const Impact = () => {
         <div className="container max-w-6xl mx-auto px-6">
           <div className="text-center mb-5">
             <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
-              Our ImpactBy The Numbers
+              Our Impact by The Numbers
             </h2>
-            <p className="text-xl text-[#4a4a4a] max-w-3xl mx-auto">
+            <p className="text-x text-[#4a4a4a] mx-auto">
               Measurable outcomes that demonstrate our model's effectiveness across multiple dimensions of impact.
             </p>
           </div>
