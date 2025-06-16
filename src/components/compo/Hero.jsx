@@ -18,8 +18,8 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center gap-10">
         {/* Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h1 className="lg:text-4xl md:text-3xl text-2xl font-extrabold mb-3 text-[#2C3E50] drop-shadow-sm text-start">
-          Quality affordable Childcare is<br /> the foundation of thriving families and fairer economies
+          <h1 className="lg:text-3xl md:text-3xl text-2xl font-extrabold mb-3 drop-shadow-sm text-start text-[#E67E22]">
+          QUALITY AFFORDABLE CHILDCARE <br/> <br/> <span className='text-[#2C3E50] text-2xl'> Is the foundation of thriving families and fairer economies</span>
           </h1>
           <p className="text-lg text-[#4a4a4a] mb-8 md:text-start text-start">
           At Toto Village, we believe childcare should not be a private struggle. It’s a shared responsibility, and a powerful opportunity to transform lives across generations.

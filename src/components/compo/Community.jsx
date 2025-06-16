@@ -10,7 +10,7 @@ export default function CommunitySection() {
           {/* Left Column - Text Content */}
           <div className="lg:w-1/2 space-y-8">
             <div className="inline-block ">
-              <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
+              <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text- drop-shadow-sm text-center">
                 Our Community
               </h2>
             </div>

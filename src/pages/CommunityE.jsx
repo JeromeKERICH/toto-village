@@ -90,7 +90,7 @@ export default function Community() {
 
   return (
     <section className="py-12 px-4 md:px-12 lg:px-24 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
