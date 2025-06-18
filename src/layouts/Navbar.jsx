@@ -24,7 +24,7 @@ export default function Navbar() {
           <li><Link to="/" className="hover:text-[#c4925c]">Home</Link></li>
           <li><Link to="/storypage" className="hover:text-[#c4925c]">About Us</Link></li>
           <li><Link to="/donation" className="hover:text-[#c4925c]">Donate</Link></li>
-          <li><Link to="/programs" className="hover:text-[#c4925c]">Programs</Link></li>
+          <li><Link to="/programs" className="hover:text-[#c4925c]">Our Model</Link></li>
           <li><Link to="/impact" className='hover:text-[#c4925c'>Impact</Link></li>
           <li><Link to="/get-invoved" className='hover:text-[#c4925c'>Get Involved</Link></li>
           <li><Link to="/media" className='hover:text-[#c4925c'>Media</Link></li>
@@ -44,7 +44,7 @@ export default function Navbar() {
           <li><Link to="/" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/storypage" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>About Us</Link></li>
           <li><Link to="/donation" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Donate</Link></li>
-          <li><Link to="/programs" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Programs</Link></li>
+          <li><Link to="/programs" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Our Model</Link></li>
           <li><Link to="/impact" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Impact</Link></li>
           <li><Link to="/get-invoved" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Get Involved</Link></li>
           <li><Link to="/media" className="block py-2 hover:text-[#c4925c]" onClick={closeMenu}>Media</Link></li>

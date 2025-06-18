@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 export default function Programs() {
   const programs = [
     {
-      link: "childcare",
+      link: "partnership-program",
       icon: <FaBuilding className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/partnership.jpg",
       title: "Partnerships for Affordable Childcare",
       description: "We work with counties to identify, upgrade, and manage childcare facilities in busy economic areas.",
     },
     {
-      link: "on-site-childcare",
+      link: "on-site",
       icon: <FaBriefcase className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/g5.jpg",
       title: "On-site Childcare Centers",
@@ -43,9 +43,9 @@ export default function Programs() {
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
             Our Programs
           </h2>
-            <div className="space-y-4 text-lg text-[#4a4a4a] text-left">
+            <div className="space-y-2 text-lg text-[#4a4a4a] text-left">
               <p>
-              In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare—a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
+              In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare, a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
                 The childcare crisis reflects deeper structural barriers that limit children's development, 
                 restrict women's ability to work, and perpetuate intergenerational poverty.
               </p>
