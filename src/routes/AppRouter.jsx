@@ -22,6 +22,7 @@ import OnSiteChildcare from "../pages/Onsite";
 import CommunityEngagement from "../pages/Engagement";
 import WorkforceDevelopment from "../pages/Workforce";
 import Impact from "../pages/Impact";
+import Contact from "../pages/Contact";
 
 // ... import the rest
 
@@ -50,6 +51,7 @@ export default function AppRouter() {
         <Route path="/program/on-site" element={<OnSiteChildcare/>}/>
         <Route path="/program/community-engagement" element={<CommunityEngagement/>}/>
         <Route path="/program/workforce-development" element={<WorkforceDevelopment/>}/>
+        <Route path="/contact" element={<Contact/>}/>
         <Route path="/impact" element={<Impact/>}/>
         {/* Add the rest of your routes here */}
       </Routes>

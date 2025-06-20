@@ -14,13 +14,13 @@ export default function MediaPage() {
       media: [
         {
           type: "video",
-          thumbnail: "assets/foundation-story.jpg",
+          thumbnail: "assets/h3.jpg",
           title: "Founding Story: The Need for Change",
-          date: "2020"
+          date: "2023"
         },
         {
           type: "gallery",
-          thumbnail: "assets/early-days.jpg",
+          thumbnail: "assets/tr4.JPG",
           title: "Early Days: Building the Vision",
           count: "12 photos"
         }
@@ -33,13 +33,13 @@ export default function MediaPage() {
       media: [
         {
           type: "video",
-          thumbnail: "assets/mother-testimonial.jpg",
+          thumbnail: "assets/m5.jpg",
           title: "Grace's Journey: From Market Vendor to Business Owner",
           date: "2023"
         },
         {
           type: "gallery",
-          thumbnail: "assets/community-event.jpg",
+          thumbnail: "assets/m4.jpeg",
           title: "Nakuru County Parent Gathering",
           count: "24 photos"
         }
@@ -52,37 +52,19 @@ export default function MediaPage() {
       media: [
         {
           type: "video",
-          thumbnail: "assets/center-opening.jpg",
-          title: "Kawangware Center Launch Ceremony",
-          date: "2022"
+          thumbnail: "assets/m1.jpg",
+          title: "Mashiara Park Launch Ceremony",
+          date: "2025"
         },
         {
           type: "interactive",
-          thumbnail: "assets/map-centers.jpg",
+          thumbnail: "assets/maps.png",
           title: "Interactive Map: Our Locations",
           label: "Explore"
         }
       ]
     },
-    {
-      title: "Childcare Heroes",
-      icon: <FaChild className="text-4xl text-[#E67E22]" />,
-      description: "Meet the caregivers at the heart of our centers",
-      media: [
-        {
-          type: "video",
-          thumbnail: "assets/caregiver-training.jpg",
-          title: "A Day in the Life of Caregiver Margaret",
-          date: "2024"
-        },
-        {
-          type: "gallery",
-          thumbnail: "assets/caregiver-portraits.jpg",
-          title: "Portraits of Our Caregivers",
-          count: "8 profiles"
-        }
-      ]
-    }
+    
   ];
 
  
@@ -172,12 +154,7 @@ export default function MediaPage() {
             >
               Contact Our Team
             </Link>
-            <Link
-              to="/press-kit"
-              className="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white hover:text-[#2C3E50] transition-colors"
-            >
-              Download Press Kit
-            </Link>
+            
           </div>
         </div>
       </div>

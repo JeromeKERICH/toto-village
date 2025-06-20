@@ -77,9 +77,9 @@ export default function Community() {
 
   // Caregiver Spotlight
   const caregiverSpotlight = {
-    name: "Margaret Wanjiku",
-    role: "Lead Caregiver",
-    location: "Kawangware Center, Nairobi",
+    name: "Ms Elizabeth",
+    role: "Caregiver",
+    location: "Mashiara Park, Nairobi",
     quote: "Through Toto Village's training, I've transformed from a househelp to a professional caregiver earning a living wage while nurturing future generations.",
     stats: [
       "3 years with Toto Village",
@@ -108,43 +108,7 @@ export default function Community() {
 
         
 
-        {/* Caregiver Spotlight */}
-        <div className="mb-20 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl">
-          <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
-            Caregiver Spotlight
-          </h2>
-          <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="md:w-1/3 flex justify-center">
-              <div className="bg-white p-2 rounded-full shadow-lg">
-                <div className="w-40 h-40 bg-gray-300 rounded-full overflow-hidden">
-                  {/* Placeholder for caregiver image */}
-                  <div className="w-full h-full bg-[#E67E22] opacity-30"></div>
-                </div>
-              </div>
-            </div>
-            <div className="md:w-2/3">
-              <h3 className="lg:text-2xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">{caregiverSpotlight.name}</h3>
-              <p className="text-[#E67E22] font-medium mb-4">{caregiverSpotlight.role} | {caregiverSpotlight.location}</p>
-              <p className="text-lg italic mb-6 text-[#4a4a4a]">"{caregiverSpotlight.quote}"</p>
-              <div className="flex flex-wrap gap-4">
-                {caregiverSpotlight.stats.map((stat, index) => (
-                  <div key={index} className="bg-white px-4 py-2 rounded-lg shadow-sm">
-                    <p className="text-sm text-[#2C3E50]">{stat}</p>
-                  </div>
-                ))}
-              </div>
-              <Link
-                to="/community/caregivers"
-                className="inline-flex items-center mt-6 font-bold text-[#E67E22] hover:text-[#D35400] border-b-2 border-[#E67E22] pb-1 transition-colors"
-              >
-                Meet more caregivers
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
+       
 
         {/* Stakeholder Groups */}
         <div className="mb-20">
@@ -169,15 +133,7 @@ export default function Community() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to={group.link}
-                  className="inline-flex items-center font-bold text-[#E67E22] hover:text-[#D35400] transition-colors"
-                >
-                  Explore {group.category}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
+                
               </div>
             ))}
             <div className="bg-[#E67E22] text-white p-6 rounded-xl shadow-lg">

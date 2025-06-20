@@ -50,7 +50,7 @@ export default function Navbar() {
                 Impact
               </Link>
               <Link 
-                to="/get-involved" 
+                to="/donation" 
                 className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
               >
                 Get Involved
@@ -60,6 +60,12 @@ export default function Navbar() {
                 className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
               >
                 Media
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
+              >
+                Contact
               </Link>
             </div>
             <Link 
@@ -120,7 +126,7 @@ export default function Navbar() {
               Impact
             </Link>
             <Link 
-              to="/get-involved" 
+              to="/donation" 
               onClick={closeMenu}
               className="block px-3 py-2 rounded-md text-[#2C3E50] hover:text-[#FF8C00] hover:bg-[#FFF5EB] font-medium"
             >
@@ -132,6 +138,13 @@ export default function Navbar() {
               className="block px-3 py-2 rounded-md text-[#2C3E50] hover:text-[#FF8C00] hover:bg-[#FFF5EB] font-medium"
             >
               Media
+            </Link>
+            <Link 
+              to="/contact" 
+              onClick={closeMenu}
+              className="block px-3 py-2 rounded-md text-[#2C3E50] hover:text-[#FF8C00] hover:bg-[#FFF5EB] font-medium"
+            >
+              Contact
             </Link>
             <Link 
               to="/donation" 

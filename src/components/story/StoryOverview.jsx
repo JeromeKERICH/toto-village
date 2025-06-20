@@ -4,7 +4,7 @@ const StoryOverview = () => {
   return (
     <section className="bg-white py-[20px] md:py-[2%] px-[20px] md:px-[8%] text-[#2C3E50]">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
+        <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#E67E22] drop-shadow-sm text-center">
          HOW IT ALL STARTED
         </h2>
         <p className="text-lg text-[#4a4a4a] leading-relaxed">
