@@ -20,7 +20,7 @@ export default function DonationSection() {
  
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-16 flex justify-center">
+    <section className="py-5 md:py-10 lg:py-15 px-4 md:px-12 lg:px-24 flex justify-center">
       <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl w-full max-w-6xl mx-auto text-center border border-[#E67E22]/20">
         
         <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">

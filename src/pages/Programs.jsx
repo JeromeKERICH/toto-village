@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaBuilding, FaBriefcase, FaUserGraduate, FaUsers } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export default function Programs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const programs = [
     {
       link: "partnership-program",
