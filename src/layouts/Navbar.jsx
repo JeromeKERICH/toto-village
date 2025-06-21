@@ -50,7 +50,7 @@ export default function Navbar() {
                 Impact
               </Link>
               <Link 
-                to="/donation" 
+                to="/get-invoved" 
                 className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
               >
                 Get Involved
@@ -147,7 +147,7 @@ export default function Navbar() {
               Contact
             </Link>
             <Link 
-              to="/donation" 
+              to="/get-invoved" 
               onClick={closeMenu}
               className="block px-3 py-2 rounded-md bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white font-medium text-center mt-2 hover:shadow-md"
             >
