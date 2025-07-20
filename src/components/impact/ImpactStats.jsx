@@ -17,7 +17,7 @@ const DataBar = ({ label, percentage }) => (
 
 const DataVisualization = () => (
   <section className="py-5 bg-[#2C3E50] text-white">
-    <div className="container max-w-6xl mx-auto px-6">
+    <div className="container max-w-7xl mx-auto px-6">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#f8f8f8] drop-shadow-sm text-center">

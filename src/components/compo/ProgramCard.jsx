@@ -35,7 +35,7 @@ export default function Programs() {
   ];
 
   return (
-    <section className="py-5 md:py-10 lg:py-15 px-4 md:px-12 lg:px-24 bg-white">
+    <section className="py-5 md:py-10 lg:py-10 px-4 md:px-12 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* New Introductory Section */}
         <div className="mb-16 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl shadow-sm border border-gray-100">

@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -23,10 +24,14 @@ import CommunityEngagement from "../pages/Engagement";
 import WorkforceDevelopment from "../pages/Workforce";
 import Impact from "../pages/Impact";
 import Contact from "../pages/Contact";
+import PrivacyPolicy from "../pages/Policy";
+import TermsOfService from "../pages/Terms";
+import useGoogleAnalytics from "../hooks/GoogleAnalytics";
 
 // ... import the rest
 
 export default function AppRouter() {
+  useGoogleAnalytics (import.meta.env.VITE_GA_TRACKING_ID);
   return (
     <BrowserRouter>
     <Navbar/>
@@ -53,6 +58,8 @@ export default function AppRouter() {
         <Route path="/program/workforce-development" element={<WorkforceDevelopment/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/impact" element={<Impact/>}/>
+        <Route path="/privacy" element={<PrivacyPolicy/>}/>
+        <Route path="/terms" element={<TermsOfService/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

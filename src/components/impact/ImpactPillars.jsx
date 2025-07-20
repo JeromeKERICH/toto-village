@@ -3,7 +3,7 @@ import { FaChartLine, FaBabyCarriage, FaHandshake } from 'react-icons/fa';
 
 const ImpactPillars = () => (
   <section className="py-5 bg-white">
-    <div className="container max-w-6xl mx-auto px-6">
+    <div className="container max-w-7xl mx-auto px-6">
       <h2 className="lg:text-5xl md:text-3xl text-3xl font-bold mb-6 text-[#2C3E50] drop-shadow-sm text-center">
         Our Impact Pillars
       </h2>

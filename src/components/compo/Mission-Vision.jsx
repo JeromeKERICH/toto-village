@@ -26,7 +26,9 @@ export default function MissionSection() {
               Our Mission
             </h3>
             <p className="text-[#4a4a4a] leading-relaxed">
-              Inspired by the African proverb <span className="italic">"It takes a village to raise a child,"</span> we believe childcare is a <span className="font-semibold text-[#5B8C5A]">shared responsibility</span>. Through partnerships, we create ecosystems where families, caregivers, and institutions work together to meet community needs - enabling economic participation and nurturing every child's potential.
+            Inspired by the African proverb <span className='text-[#5B8C5A] font-semibold'> “It takes a village to raise a child,” </span>Toto Village is rooted in the belief that childcare is a shared responsibility. <br/> 
+Through a partnership model, we foster a thriving ecosystem where families, caregivers, professionals, and institutions work together to meet the childcare needs of the community - enabling economic participation, and nurturing every child’s potential
+
             </p>
           </div>
           
@@ -36,7 +38,8 @@ export default function MissionSection() {
               Our Vision
             </h3>
             <p className="text-[#4a4a4a] leading-relaxed">
-              A world where <span className="font-semibold text-[#FF8C00]">no woman chooses between career and children</span>; where every child grows up safe, healthy, and loved; and where communities build economies centered on <span className="font-semibold text-[#5B8C5A]">care and mutual support</span>.
+            We envision a world where accessible, quality childcare provision empowers women to excel in both career and motherhood, driving shared economic prosperity across their communities.
+
             </p>
           </div>
         </div>

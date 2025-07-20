@@ -10,7 +10,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
+    <nav className="bg-[#f8f8f8] shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -54,6 +54,13 @@ export default function Navbar() {
                 className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
               >
                 Get Involved
+              </Link>
+
+              <Link 
+                to="/community-extended" 
+                className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
+              >
+                Our Community
               </Link>
               <Link 
                 to="/media" 

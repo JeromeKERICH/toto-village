@@ -22,8 +22,9 @@ export default function HeroSection() {
             <span className="text-[#FF8C00] bg-clip-text bg-gradient-to-r from-[#FF8C00] to-[#FFA500]">
               QUALITY AFFORDABLE CHILDCARE
             </span>
-            <br className="hidden md:block" />
-            <span className="text-3xl font-bold text-[#2C3E50] mt-4 block">
+            <p className="text-xl italic mt-2 mb-2 text-[#5B8C5A]">is</p>
+            
+            <span className="text-3xl font-bold text-[#2C3E50] mt-2 block">
               The Foundation of Thriving Families <br/>and Vibrant Economies
             </span>
           </h1>
@@ -36,17 +37,12 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <Link
-              to="/partners"
+              to="/about-partners"
               className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] text-white px-8 py-3 rounded-lg font-bold hover:from-[#FF7B00] hover:to-[#FF9500] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105"
             >
               Become a Partner
             </Link>
-            <Link
-              to="/donation"
-              className="bg-white text-[#2C3E50] border-2 border-[#5B8C5A] px-8 py-3 rounded-lg font-bold hover:bg-[#5B8C5A] hover:text-white hover:border-transparent transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
-            >
-              Support Our Mission
-            </Link>
+            
           </div>
         </div>
 

@@ -46,35 +46,8 @@ const WhyDonate = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {donationCards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`${card.bgColor} p-8 rounded-2xl border ${card.borderColor} shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2`}
-            >
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm mb-4">
-                {card.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-[#2C3E50]">{card.title}</h3>
-              <p className="text-[#2C3E50] leading-relaxed">{card.description}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Solid CTA Section - Matching CommunitySection style */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-          className="relative bg-[#2C3E50] p-1 border rounded-lg"
-        >
-          
-        </motion.div>
+       
+      
       </motion.div>
     </section>
   );

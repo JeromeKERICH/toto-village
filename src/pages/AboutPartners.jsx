@@ -22,7 +22,7 @@ const AboutPartners = () => {
       ]
     },
     {
-      title: "County Government Officials",
+      title: "Government institutions",
       description: "We collaborate with county governments to align our efforts with local priorities and ensure sustainable impact through policy support and resource sharing.",
       benefits: [
         "Data sharing for better decision making",
@@ -32,7 +32,7 @@ const AboutPartners = () => {
       ]
     },
     {
-      title: "Corporate Partners",
+      title: "Private Sectors",
       description: "Businesses partner with us through financial support, employee volunteering, and in-kind donations to create shared value for communities and their organizations.",
       benefits: [
         "Employee engagement opportunities",
@@ -56,20 +56,12 @@ const AboutPartners = () => {
   return (
     <div className="px-[5%] py-16 bg-white">
       <div className="max-w-6xl mx-auto">
-        <button 
-          onClick={() => navigate(-1)}
-          className="mb-8 flex items-center text-[#ff4848] hover:text-[#e03e3e] transition-colors"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
-          </svg>
-          Back to Partnerships
-        </button>
+        
 
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#E67E22]">
+        <h1 className="text-3xl md:text-4xl text-center font-bold mb-4 text-[#E67E22]">
           Our Partnership Models
         </h1>
-        <p className="text-xl text-[#4a4a4a] mb-12 max-w-3xl">
+        <p className="text-xl text-[#4a4a4a] mb-12 text-center max-w-6xl">
           We work with diverse partners who share our vision for community transformation. Each partnership is tailored to maximize impact and create mutual value.
         </p>
 

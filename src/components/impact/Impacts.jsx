@@ -53,7 +53,7 @@ const ImpactStories = () => {
 
   return (
     <section className="py-5 bg-white">
-      <div className="container max-w-6xl mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-6">
         <div className="text-center mb-5">
           <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm text-center">
             Our Impact by The Numbers
