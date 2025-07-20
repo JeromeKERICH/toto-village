@@ -14,7 +14,7 @@ const HeroSection = () => {
           <p className="text-lg text-white leading-relaxed">
             Affordable, community-based solutions that empower parents and nurture children's potential.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-row gap-2">
             <Link
               to="/locations"
               className="flex items-center gap-2 bg-[#E67E22] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#D46B1A] transition-all shadow-md"
