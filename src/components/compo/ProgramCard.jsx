@@ -8,21 +8,21 @@ export default function Programs() {
       link: "partnership-program",
       icon: <FaBuilding className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/partnership.jpg",
-      title: "Partnerships for Affordable Childcare",
-      description: "We work with counties to identify, upgrade, and manage childcare facilities in busy economic areas.",
+      title: "Government Partnerships for Affordable Childcare",
+      description: "We partner with Governments and Private Sector to create safe, nurturing, joyful spaces for children in everyday locations like markets and workplaces.",
     },
     {
       link: "on-site",
       icon: <FaBriefcase className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/g5.jpg",
-      title: "On-site Childcare Centers",
+      title: "Private Sector Partnerships for On-Site Childcare Centres",
       description: "Providing on-site childcare that supports working parents and drives organizational success.",
     },
     {
       link: "workforce-development",
       icon: <FaUserGraduate className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/train.jpg",
-      title: "Workforce Development",
+      title: "Workforce Development for Childcare Economy",
       description: "We recruit, train, and certify local caregivers in child development and business management.",
     },
     {
@@ -41,7 +41,7 @@ export default function Programs() {
         <div className="mb-16 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl shadow-sm border border-gray-100">
           <div className="max-w-4xl mx-auto text-center ">
           <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold mb-6 text-[#FF8C00] bg-clip-text bg-gradient-to-r from-[#FF8C00] to-[#FFA500] drop-shadow-sm">
-            Our Model
+          The Problem
           </h2>
             <div className="space-y-2 text-lg text-[#4a4a4a] text-left">
               <p>
@@ -54,8 +54,7 @@ export default function Programs() {
                 as essential social and economic infrastructure, not just a private responsibility.
               </p>
               <p>
-                We partner with governments and corporations to design and scale community-embedded childcare 
-                systems that are affordable, high-quality, and sustainable.
+              We partner with Governments and Private Sector to create safe, nurturing, joyful spaces for children in everyday locations like markets and workplaces.
               </p>
             </div>
           </div>
@@ -74,7 +73,7 @@ export default function Programs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p>Design and scaling of community-embedded childcare solutions that allow women to work and children to thrive — creating dual-generational impact in low-income communities.</p>
+                <p>Design and scaling of community-embedded childcare solutions that allow women to work and children to thrive, creating dual-generational impact in low-income communities.</p>
               </div>
               <div className="flex items-start">
                 <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
@@ -82,7 +81,9 @@ export default function Programs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p>Our model partners with County Governments and Private Corporations to integrate quality childcare into public markets, transport hubs, and workplaces.</p>
+                <p> We partner with governments and corporations to design and scale community-embedded childcare 
+                systems that are affordable, high-quality, and sustainable.</p>
+                
               </div>
             </div>
             <div className="space-y-4">

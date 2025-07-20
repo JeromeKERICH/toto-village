@@ -19,7 +19,7 @@ export default function CommunitySection() {
             
             <div className="bg-[#E6F5E6] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <p className="text-lg md:text-xl text-[#2C3E50] mb-6 leading-relaxed">
-                A vibrant ecosystem of diverse stakeholders working together to drive change for women and children.
+              A collaborative ecosystem of diverse stakeholders working together to drive economic empowerment for women and thriving childhoods for children.
               </p>
               <div>
                 <Link 

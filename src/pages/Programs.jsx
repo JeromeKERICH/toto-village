@@ -1,31 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaBuilding, FaBriefcase, FaUserGraduate, FaUsers } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export default function Programs() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const programs = [
     {
       link: "partnership-program",
       icon: <FaBuilding className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/partnership.jpg",
-      title: "Partnerships for Affordable Childcare",
-      description: "We work with counties to identify, upgrade, and manage childcare facilities in busy economic areas.",
+      title: "Government Partnerships for Affordable Childcare",
+      description: "We work with Goverments to identify, upgrade, and manage childcare facilities in busy economic areas.",
     },
     {
       link: "on-site",
       icon: <FaBriefcase className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/g5.jpg",
-      title: "On-site Childcare Centers",
+      title: "Private Sector Partnerships for On-Site Childcare Centres",
       description: "Providing on-site childcare that supports working parents and drives organizational success.",
     },
     {
       link: "workforce-development",
       icon: <FaUserGraduate className="text-4xl text-[#2C3E50] drop-shadow-lg" />,
       image: "assets/train.jpg",
-      title: "Workforce Development",
+      title: "Workforce Development for Childcare Economy",
       description: "We recruit, train, and certify local caregivers in child development and business management.",
     },
     {
@@ -38,13 +35,13 @@ export default function Programs() {
   ];
 
   return (
-    <section className="py-4 px-4 md:px-12 lg:px-24 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-5 md:py-10 lg:py-10 px-4 md:px-12 lg:px-24 bg-white">
+      <div className="max-w-6xl mx-auto">
         {/* New Introductory Section */}
         <div className="mb-16 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="max-w-4xl mx-auto text-center">
-          <h2 className="lg:text-5xl md:text-3xl text-2xl font-bold mb-3 text-[#2C3E50] drop-shadow-sm">
-            Our Programs
+          <div className="max-w-4xl mx-auto text-center ">
+          <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold mb-6 text-[#FF8C00] bg-clip-text bg-gradient-to-r from-[#FF8C00] to-[#FFA500] drop-shadow-sm">
+          The Problem
           </h2>
             <div className="space-y-2 text-lg text-[#4a4a4a] text-left">
               <p>
@@ -77,7 +74,7 @@ export default function Programs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p>Design and scaling of community-embedded childcare solutions that allow women to work and children to thrive — creating dual-generational impact in low-income communities.</p>
+                <p>Design and scaling of community-embedded childcare solutions that allow women to work and children to thrive, creating dual-generational impact in low-income communities.</p>
               </div>
               <div className="flex items-start">
                 <div className="bg-[#E67E22] rounded-full p-2 mr-4 mt-1">
@@ -85,7 +82,8 @@ export default function Programs() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p>Our model partners with County Governments and Private Corporations to integrate quality childcare into public markets, transport hubs, and workplaces.</p>
+                <p>Our model partners with Governments and Private sectors to integrate quality childcare into public markets, learning institutions and workplaces.</p>
+                
               </div>
             </div>
             <div className="space-y-4">

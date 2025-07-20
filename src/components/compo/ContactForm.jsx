@@ -105,7 +105,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#2b2b2b]">Email</h4>
-                    <p className="text-[#4a4a4a]">info@totovillage.org</p>
+                    <p className="text-[#4a4a4a]">wecare@totovillage.org</p>
                   </div>
                 </div>
               </div>
