@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import ImpactHero from '../components/impact/ImpactOverview'
 import ImpactStories from '../components/impact/Impacts'
-import DataVisualization from '../components/impact/ImpactStats'
 import ImpactPillars from '../components/impact/ImpactPillars'
 
 const Impact = () => {
@@ -13,7 +12,6 @@ const Impact = () => {
     <div>
       <ImpactHero/>
       <ImpactStories/>
-      <DataVisualization/>
       <ImpactPillars/>
     </div>
   )

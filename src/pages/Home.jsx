@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import HeroSection from '../components/compo/Hero'
 import Programs from '../components/compo/ProgramCard'
-
-import ContactSection from '../components/compo/ContactForm'
 import MissionSection from '../components/compo/Mission-Vision'
 import CommunitySection from '../components/compo/Community'
+import ProblemSection from '../components/compo/Problem'
 
 
 
@@ -15,11 +14,13 @@ const Home = () => {
   return (
     <div>
       <HeroSection/>
+      <ProblemSection/>
+      <Programs/>
       <MissionSection/>
       <CommunitySection/>
-      <Programs/>
       
-      <ContactSection/>
+      
+      
     </div>
   )
 }

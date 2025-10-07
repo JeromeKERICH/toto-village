@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import GetInvolvedHero from '../components/involved/InvolvedHero'
 
 
-import InvolvedCTA from '../components/involved/InvolvedCTA';
 import DonationCard from '../components/involved/InvolvedKit';
 
 
@@ -15,7 +14,7 @@ const Involved = () => {
       <GetInvolvedHero/>
       <DonationCard/>
       
-      <InvolvedCTA/>
+      
     </div>
   )
 }

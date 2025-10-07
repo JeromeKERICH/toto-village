@@ -16,9 +16,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="assets/log.png" 
+              src="assets/flog.png" 
               alt="Toto-Village Logo" 
-              className="h-12 mr-2 mt-2"
+              className="h-20 w-35 mr-2 mt-2"
             />
           </Link>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
                 to="/get-invoved" 
                 className="text-[#2C3E50] hover:text-[#FF8C00] font-medium transition-colors duration-200"
               >
-                Get Involved
+                Support Us
               </Link>
 
               <Link 

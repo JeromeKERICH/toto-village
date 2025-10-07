@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import StoryOverview from '../components/story/StoryOverview'
 import FoundersBrief from '../components/story/Founders'
 import DonationCTA from '../components/story/DonationBrief'
 import FAQ from '../components/story/FAQs'
@@ -14,7 +13,6 @@ const StoryPage = () => {
   return (
     <div className='bg-[#f6f4f1] '>
       <HeroSection/>
-      <StoryOverview/>
       <WhatWeDo/>
       <FoundersBrief/>
       

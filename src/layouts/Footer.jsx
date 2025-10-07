@@ -15,19 +15,19 @@ export default function Footer() {
               TotoVillage
             </h2>
             <p className="text-sm leading-relaxed">
-              Childcare is not a private struggle, it's a shared responsibility and a community opportunity.
+              Childcare shouldn't not be private struggle, it's a shared responsibility and a community opportunity.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-[#E67E22] transition-colors">
+              <a href="https://www.facebook.com/share/19ZoRGqj51/" className="text-white hover:text-[#E67E22] transition-colors">
                 <FaFacebook size={20} />
               </a>
-              <a href="https://x.com/Totocareke" className="text-white hover:text-[#E67E22] transition-colors">
+              <a href="https://x.com/totovillage" className="text-white hover:text-[#E67E22] transition-colors">
                 <FaTwitter size={20} />
               </a>
-              <a href="https://www.instagram.com/totocarehub?igsh=MTlvaXpmcWhpOWNraA==" className="text-white hover:text-[#E67E22] transition-colors">
+              <a href="https://www.instagram.com/totovillage1?igsh=MWlibXEyd3VqeWdvOQ==" className="text-white hover:text-[#E67E22] transition-colors">
                 <FaInstagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/totocare-hub-448a75320/" className="text-white hover:text-[#E67E22] transition-colors">
+              <a href="https://www.linkedin.com/company/totovillage/" className="text-white hover:text-[#E67E22] transition-colors">
                 <FaLinkedin size={20} />
               </a>
             </div>

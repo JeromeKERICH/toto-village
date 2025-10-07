@@ -36,30 +36,8 @@ export default function Programs() {
 
   return (
     <section className="py-5 md:py-10 lg:py-10 px-4 md:px-12 lg:px-24 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* New Introductory Section */}
-        <div className="mb-16 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="max-w-4xl mx-auto text-center ">
-          <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold mb-6 text-[#FF8C00] bg-clip-text bg-gradient-to-r from-[#FF8C00] to-[#FFA500] drop-shadow-sm">
-          The Problem
-          </h2>
-            <div className="space-y-2 text-lg text-[#4a4a4a] text-left">
-              <p>
-              In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare, a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
-                The childcare crisis reflects deeper structural barriers that limit children's development, 
-                restrict women's ability to work, and perpetuate intergenerational poverty.
-              </p>
-              <p>
-                <span className="font-semibold text-[#2C3E50]">Toto Village</span> approaches childcare solutions 
-                as essential social and economic infrastructure, not just a private responsibility.
-              </p>
-              <p>
-                We partner with governments and corporations to design and scale community-embedded childcare 
-                systems that are affordable, high-quality, and sustainable.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto">
+        
 
         {/* The Toto Village Difference Section */}
         <div className="mb-16 bg-[#2C3E50] text-white p-8 rounded-xl shadow-lg">
@@ -152,7 +130,33 @@ export default function Programs() {
             </div>
           ))}
         </div>
+
+        {/* New Introductory Section
+        <div className="mb-16 bg-gradient-to-r from-[#f8f9fa] to-[#e9ecef] p-8 rounded-xl shadow-sm border border-gray-100">
+          <div className="max-w-4xl mx-auto text-center ">
+          <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold mb-6 text-[#FF8C00] bg-clip-text bg-gradient-to-r from-[#FF8C00] to-[#FFA500] drop-shadow-sm">
+          The Problem
+          </h2>
+            <div className="space-y-2 text-lg text-[#4a4a4a] text-left">
+              <p>
+              In sub-Saharan Africa, 70% of households in low-income communities lack reliable childcare, a structural barrier that stunts early childhood development, constraints women’s workforce participation, and perpetuates intergenerational poverty and inequality.
+                The childcare crisis reflects deeper structural barriers that limit children's development, 
+                restrict women's ability to work, and perpetuate intergenerational poverty.
+              </p>
+              <p>
+                <span className="font-semibold text-[#2C3E50]">Toto Village</span> approaches childcare solutions 
+                as essential social and economic infrastructure, not just a private responsibility.
+              </p>
+              <p>
+                We partner with governments and corporations to design and scale community-embedded childcare 
+                systems that are affordable, high-quality, and sustainable.
+              </p>
+            </div>
+          </div>
+        </div>
+          */}
       </div>
+
     </section>
   );
 }

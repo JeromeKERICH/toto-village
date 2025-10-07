@@ -56,33 +56,10 @@ const FullStoryPage = () => {
           Prisca Muyodi, Founder
         </p>
       </motion.blockquote>
+      <div>
 
-      {/* Sections */}
-      <div className="space-y-16">
-        {/* Listening to the Community */}
-        <motion.section 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#1D3557] flex items-center">
-            <span className="w-6 h-1 bg-[#ff4848] mr-3 mt-1"></span>
-            Listening to the Community: The Heart of the Solution
-          </h2>
-          <div className="space-y-5 text-[#4B5563]">
-            <p className="text-lg leading-relaxed">
-              Prisca and her team didn't rush into a quick fix. Instead, they rolled up their sleeves and engaged deeply with the people they wanted to serve. Through conversations, surveys, and countless meetings, they listened—really listened—to the needs, hopes, and fears of mothers, caregivers, and local women.
-            </p>
-            <p className="text-lg leading-relaxed">
-              This was about more than childcare. It was about redefining what care looks like in low-income settings, making sure it actually worked for the community and its children.
-            </p>
-            <p className="text-lg leading-relaxed font-medium text-[#1D3557]">
-              The outcome? The birth of the TotoCare program in 2020.
-            </p>
-          </div>
-        </motion.section>
+      
+        
 
         {/* Nyumbani Pack to Care Economy */}
         <motion.section 
@@ -98,50 +75,23 @@ const FullStoryPage = () => {
           </h2>
           <div className="space-y-5 text-[#4B5563]">
             <p className="text-lg leading-relaxed">
-              The initial offering was humble but powerful: the Nyumbani Pack, a home-care package designed to support families with in-home childcare. But as the program grew, so did the vision.
+            The initial service was a curated package to support families during the COVID pandemic: the Nyumbani Toto Pack - a home-care package designed to support families with in-home childcare. 
+
+As the program grew, so did the vision. 
+
+<br/>
+<br/>
+
+Toto Village evolved into a community-centred model that partners with government and private sector to scale community-embeded childcare villages; as well as empowering micro-daycare businesswomen (TotoFounders) to professionalise childcare-as-a-livelihood model. 
+
+It's a powerful catalyst for multi-generational community empowerment.
+
             </p>
-            <p className="text-lg leading-relaxed">
-              TotoCare evolved into a community-driven model that empowers local women—called TotoCarers—to run home daycares in their neighborhoods. This wasn't just childcare; it was an economic movement, creating jobs and fostering independence for women while giving children a safe, loving place to grow and learn.
-            </p>
-            <ul className="list-none space-y-3">
-              {[
-                "Boosts local economies by creating income opportunities for caregivers.",
-                "Offers trusted, culturally relevant care that respects family values.",
-                "Builds a community network where mothers support each other and grow stronger together."
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className={`text-${index % 2 === 0 ? '[#ff4848]' : '[#f4cc15]'} mr-3 mt-1`}>•</span>
-                  <span className="text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="text-lg leading-relaxed italic text-[#1D3557]">
-              It's a beautiful cycle of care and empowerment.
-            </p>
+            
+           
           </div>
         </motion.section>
 
-        {/* Empowering Women */}
-        <motion.section 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#1D3557] flex items-center">
-            <span className="w-6 h-1 bg-[#ff4848] mr-3 mt-1"></span>
-            A Dream Realized: Empowering Women, Nurturing Children
-          </h2>
-          <div className="space-y-5 text-[#4B5563]">
-            <p className="text-lg leading-relaxed">
-              What makes Toto Village special isn't just the program itself—it's the people behind it. The TotoFounders, led by Prisca Muyodi, embody a belief that "anything is achievable if you put your mind to it."
-            </p>
-            <p className="text-lg leading-relaxed">
-              This isn't just theory. It's a living, breathing reality for the many women who have discovered their economic potential through the program. Women who once felt trapped by circumstance now run their own daycare businesses, provide for their families, and watch their children thrive in a nurturing environment.
-            </p>
-          </div>
-        </motion.section>
 
         {/* Why Toto Village Matters */}
         <motion.section 
@@ -149,27 +99,27 @@ const FullStoryPage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow mt-10"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#1D3557] flex items-center">
             <span className="w-6 h-1 bg-[#f4cc15] mr-3 mt-1"></span>
-            Why Toto Village Matters — And Why It's Just the Beginning
+            Why Toto Village Matters, And Why It's Just the Beginning
           </h2>
           <div className="space-y-5 text-[#4B5563]">
             <p className="text-lg leading-relaxed">
-              Toto Village is more than a program. It's a movement—a bold, hopeful answer to systemic problems faced by millions of families across East Africa.
-            </p>
-            <p className="text-lg leading-relaxed">
-              It brings authenticity, community, and compassion back to the childcare conversation. It proves that innovative solutions can come from within the community and be tailored to its unique challenges.
-            </p>
+            Toto Village is more than a program. It's a movement—a bold, hopeful answer to systemic problems faced by millions of families across East Africa.
+
+It brings the authenticity of ubuntu back into the childcare conversation. It proves that innovative solutions can come from within the community and be tailored to its unique challenges.
+</p>
             <p className="text-lg leading-relaxed">
               As Toto Village grows, it invites everyone—parents, caregivers, partners, and supporters—to join in shaping a future where:
             </p>
             <ul className="list-none space-y-3 mb-6">
               {[
-                "Women don't have to choose between their careers and their children.",
+                "Women don't have to choose between their career and motherhood.",
                 "Children grow up safe, healthy, and loved.",
-                "Communities build thriving economies around care and support."
+                "Communities build thriving economies around quality childcare and support."
+                
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span className={`text-${index % 2 === 0 ? '[#ff4848]' : '[#f4cc15]'} mr-3 mt-1`}>•</span>
