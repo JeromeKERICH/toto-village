@@ -28,6 +28,7 @@ import PrivacyPolicy from "../pages/Policy";
 import TermsOfService from "../pages/Terms";
 import useGoogleAnalytics from "../hooks/GoogleAnalytics";
 import DonationPage from "../pages/DonationPage";
+import TeamSection from "../pages/Team";
 
 // ... import the rest
 
@@ -62,6 +63,7 @@ export default function AppRouter() {
         <Route path="/privacy" element={<PrivacyPolicy/>}/>
         <Route path="/terms" element={<TermsOfService/>}/>
         <Route path="/donate" element={<DonationPage/>}/>
+        <Route path="/team" element={<TeamSection/>}/>
         {/* Add the rest of your routes here */}
       </Routes>
     <Footer/>

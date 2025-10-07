@@ -98,10 +98,10 @@ const EcosystemHero = () => {
                             whileTap={{ scale: 0.98 }}
                         >
                             <Link
-                                to="/locations"
+                                to="/team"
                                 className="inline-flex items-center text-sm gap-3 px-8 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20"
                             >
-                                Find a Location
+                                Meet Our Team
                                 
                             </Link>
                         </motion.div>

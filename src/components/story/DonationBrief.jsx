@@ -118,34 +118,7 @@ const DonationPage = () => {
                         Your donation helps us provide safe, nurturing childcare environments, support women-led daycare businesses, and uplift entire communities.
                     </motion.p>
 
-                    {/* Impact Stats */}
-                    <motion.div 
-                        className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto"
-                        variants={containerVariants}
-                    >
-                        {[
-                            { number: "Safe", label: "Childcare Environments" },
-                            { number: "Women-Led", label: "Businesses Supported",
-                            }
-                        ].map((stat, index) => (
-                            <motion.div
-                                key={index}
-                                variants={itemVariants}
-                                className="text-center group"
-                                whileHover={{ y: -5 }}
-                            >
-                                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-[#2C3E50]/10 hover:shadow-xl transition-all duration-500">
-                                    <div className="text-2xl font-light text-[#E67E22] mb-2 group-hover:text-[#5B8C5A] transition-colors duration-300">
-                                        {stat.number}
-                                    </div>
-                                    <div className="text-sm text-[#2C3E50]/70 font-light">
-                                        {stat.label}
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-
+                    
                     <motion.div
                         variants={itemVariants}
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center"
